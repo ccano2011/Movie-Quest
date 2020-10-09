@@ -22,7 +22,7 @@ Desktop/Tablet Wireframes:
 ![Imgur](https://i.imgur.com/qKlNDrd.png)
 
 Mobile Wireframes:
-![](Mobile-wireframes.md)
+![relative](Mobile-wireframes.md)
 
 
 ## API and Data Sample
@@ -109,6 +109,3 @@ This project will also use Airtable to store movies the user wants to save for l
 
     Any changes to the project will be reflected here
 
-## Issue Ticket Form:
-
-    https://docs.google.com/forms/d/e/1FAIpQLSfkrM82Kljv_Wxx_716zv2WTHb1qr_J8htnMoBOiIsP4MN02w/viewform
