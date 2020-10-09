@@ -22,7 +22,7 @@ Desktop/Tablet Wireframes:
 ![Imgur](https://i.imgur.com/qKlNDrd.png)
 
 Mobile Wireframes:
-![a relative link](Mobile-wireframes.md)
+![](Mobile-wireframes.md)
 
 
 ## API and Data Sample
@@ -54,7 +54,7 @@ A sample from the API: https://api.themoviedb.org/3/movie/550?{API_KEY_HERE}
 This project will also use Airtable to store movies the user wants to save for later
 
 ## Component Hierarchy
-![Imgur](https://i.imgur.com/EYCoSkD.png)
+![Imgur](https://i.imgur.com/07bAawS.png)
 
 ## MVP/PostMVP
 
@@ -108,3 +108,7 @@ This project will also use Airtable to store movies the user wants to save for l
 ## Change Log:
 
     Any changes to the project will be reflected here
+
+## Issue Ticket Form:
+
+    https://docs.google.com/forms/d/e/1FAIpQLSfkrM82Kljv_Wxx_716zv2WTHb1qr_J8htnMoBOiIsP4MN02w/viewform
