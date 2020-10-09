@@ -15,14 +15,17 @@ Enter: Movie Quest! It is a web application that allows users to see what movies
 
 ## Wireframes
 Desktop/Tablet Wireframes:
-![Imgur](https://i.imgur.com/PAmvMgT.png)
-![Imgur](https://i.imgur.com/hSAyMXR.png)
-![Imgur](https://i.imgur.com/JHWz7ua.png)
-![Imgur](https://i.imgur.com/JHWz7ua.png)
-![Imgur](https://i.imgur.com/qKlNDrd.png)
+![Imgur](https://i.imgur.com/acWaJPB.png)
+![Imgur](https://i.imgur.com/HdXhOc4.png)
+![Imgur](https://i.imgur.com/9eTmTXX.png)
+![Imgur](https://i.imgur.com/25ZWhCT.png)
+![Imgur](https://i.imgur.com/ywgngCD.png)
 
 Mobile Wireframes:
 ![Click Here](Mobile-wireframes.md)
+
+### Post MVP
+![Imgur](https://i.imgur.com/7FqOh6l.png)
 
 
 ## API and Data Sample
@@ -51,22 +54,53 @@ A sample from the API: https://api.themoviedb.org/3/movie/550?{API_KEY_HERE}
         ....etc.....}
 ```
 
-This project will also use Airtable to store movies the user wants to save for later
+This project will also use Airtable to store movies the user wants to save for later. Here's a sample JSON response for the Airtable:
+
+```
+{
+    "records": [
+        {
+            "id": "recCjSMDPEqPygkeN",
+            "fields": {
+                "Title": "place-holder title",
+                "Poster": "URL for <img> path",
+                "Release Year": "20XX",
+                "Runtime": "525,600 min."
+            },
+            "createdTime": "2020-10-09T14:22:08.000Z"
+        },
+        {
+            "id": "recVPB3MDpkdLr1ep",
+            "fields": {},
+            "createdTime": "2020-10-09T14:22:08.000Z"
+        },
+        {
+            "id": "rec1o5jHfqaCFtO17",
+            "fields": {},
+            "createdTime": "2020-10-09T14:22:08.000Z"
+        }
+    ],
+    "offset": "rec1o5jHfqaCFtO17"
+}
+```
 
 ## Component Hierarchy
-![Imgur](https://i.imgur.com/hyLXEwT.png)
+![Imgur](https://i.imgur.com/52W3RBW.png)
 
 ## MVP/PostMVP
 
 #### MVP 
 
-- Leverage the TMDb API with Query Strings to add personalized results.
+- Leverage the TMDb API with Query Strings to return "Popular Movies"
+- Have a component that will direct you to "Results"
+- Allow the user to save the result (Title, Poster, Release Year, Runtime) to Airtable
 - Render appropriate movie information and images to the DOM
-- Allow users to add movies to a list that will be saved to Airtable; a second API
+- Make a second component that will allow for Query strings to return results that gives the "best of" & "genre"
 - Properly style the compenents in the app
 
 #### PostMVP  
 
+- Add a component that will allow users to search by up to 2 genres and return user to "Results"
 - Add a link to a google search with the movie title as an extension like a query string: (https://www.google.com/search?q={MOVIE_TITLE_PASSED_HERE})
 - Use local storage to save user's List
 
@@ -86,13 +120,22 @@ This project will also use Airtable to store movies the user wants to save for l
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Initial Pseudocode & Component structure| H | 2hrs| hrs | hrs |
-| Initial React Application w/ components & TMDb API implemented| H | 12hrs| hrs | hrs |
-| Working with Airtable API | H | 3hrs| hrs | hrs |
-| Initial CSS for Mobile-First | H | 8hrs| hrs | hrs |
-| Initial CSS for Desktop/Tablet-Second | H | 5hrs| hrs | hrs |
-| Initial CSS for Mobile-First | H | 8hrs| hrs | hrs |
-| Total | H | 38hrs| hrs | 5hrs |
+| Initial Pseudocode/Planning & App component structure| H | 2hrs| hrs | hrs |
+| Add axios to return "Popular Movies" from TMDB API w/ Query strings| H | 2hrs| hrs | hrs |
+| Create React component */* for the Homepage with Button for "Show me what's popular" | H | 4hrs| hrs | hrs |
+| Have Button redirect user to */choice/:query* | H | 3hrs| hrs | hrs |
+| Add axios to */choice/:query* from Airtable and create "Add to My List" Button | H | 4hrs| hrs | hrs |
+| Have */choice/:query* return a list of results for "Popular Movies" | H | 4hrs| hrs | hrs |
+| Allow user to select a movie from */choice/:query* and add it to "My List" | H | 4hrs| hrs | hrs |
+| Create */pick/:menu* for the "Best of genre/year" with options for users to use dropdown selection for either genre or year  | H | 4hrs| hrs | hrs |
+| Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| hrs | hrs |
+| After MVP functionality is completed, begin initial CSS styling for "Homepage"| H | 3hrs| hrs | hrs |
+| CSS styling for "Popular Movies" | H | 3hrs| hrs | hrs |
+| CSS styling for "Results" | H | 3hrs| hrs | hrs |
+| CSS styling for "My List" | H | 3hrs| hrs | hrs |
+| CSS styling for "Best of genre/year" | H | 3hrs| hrs | hrs |
+| CSS styling for Mobile & Tablet | H | 3hrs| hrs | hrs |
+| Total | H | 49hrs| hrs | hrs |
 
 ## SWOT Analysis
 
@@ -101,9 +144,9 @@ This project will also use Airtable to store movies the user wants to save for l
 ### Weaknesses:
     Class components
 ### Opportunities:
-    Able to gain experience with React!
+    This will be an incredible way to reinforce React and hopefully learn a lot!
 ### Threats:
-    Making my deliverables without major setbacks with the API
+    Making my deliverables without major setbacks due to my inexperience with React or issues with the API
 
 ## Change Log:
 
