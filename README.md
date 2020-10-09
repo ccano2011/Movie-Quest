@@ -94,7 +94,7 @@ This project will also use Airtable to store movies the user wants to save for l
 | Initial CSS for Mobile-First | H | 8hrs| hrs | hrs |
 | Initial CSS for Desktop/Tablet-Second | H | 5hrs| hrs | hrs |
 | Initial CSS for Mobile-First | H | 8hrs| hrs | hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Total | H | 38hrs| hrs | 5hrs |
 
 ## SWOT Analysis
 
