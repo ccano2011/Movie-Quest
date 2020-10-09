@@ -14,18 +14,16 @@ Enter: Movie-Picker! It is a web application that allows users to specify a genr
 
 
 ## Wireframes
-
+Desktop/Tablet Wireframes:
 ![Imgur](https://i.imgur.com/PAmvMgT.png)
 ![Imgur](https://i.imgur.com/hSAyMXR.png)
 ![Imgur](https://i.imgur.com/JHWz7ua.png)
 ![Imgur](https://i.imgur.com/JHWz7ua.png)
 ![Imgur](https://i.imgur.com/qKlNDrd.png)
 
+Mobile Wireframes:
+![a relative link](Mobile-wireframes.md)
 
-![Imgur](https://i.imgur.com/PjynNL5.png)
-![Imgur](https://i.imgur.com/HU972q9.png)
-![Imgur](https://i.imgur.com/jPtN8Yf.png)
-![Imgur](https://i.imgur.com/Dg5ADYL.png)
 
 ## API and Data Sample
 
