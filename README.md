@@ -10,7 +10,7 @@ Let's be honest: We've all spent more time scrolling to find something to watch 
 
 If only there was a way to help alleviate this paradox of choice....
 
-Enter: Movie-Picker! It is a web application that allows users to specify a genre, decade, actor, director, and even select if they want to watch an Oscar award winner and then return a recommendation using The Movie Database (https://developers.themoviedb.org/) api!
+Enter: Movie Quest! It is a web application that allows users to see what movies are popular right now, find a movie to watch by specifying up to 2 genres and have Movie Quest return a recommendation, or find the best movies by year by leveraging the The Movie Database (https://developers.themoviedb.org/) api! Users can also save titles that interest them to a list hosted by Airtable so they can return to it at a later time.
 
 
 ## Wireframes
@@ -22,7 +22,7 @@ Desktop/Tablet Wireframes:
 ![Imgur](https://i.imgur.com/qKlNDrd.png)
 
 Mobile Wireframes:
-![relative](Mobile-wireframes.md)
+![Click Here](Mobile-wireframes.md)
 
 
 ## API and Data Sample
@@ -74,7 +74,7 @@ This project will also use Airtable to store movies the user wants to save for l
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|10-09-20| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|10-09-20| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |10-09-20| Project Approval | Incomplete
 |10-11-20| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |10-12-20| Pseudocode / actual code | Incomplete
@@ -97,11 +97,11 @@ This project will also use Airtable to store movies the user wants to save for l
 ## SWOT Analysis
 
 ### Strengths:
-    Using axios in react
+    Resourcefulness in looking up information
 ### Weaknesses:
     Class components
 ### Opportunities:
-    Able to gain experience in writing in react
+    Able to gain experience with React!
 ### Threats:
     Making my deliverables without major setbacks with the API
 
