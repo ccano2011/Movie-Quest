@@ -54,7 +54,7 @@ A sample from the API: https://api.themoviedb.org/3/movie/550?{API_KEY_HERE}
 This project will also use Airtable to store movies the user wants to save for later
 
 ## Component Hierarchy
-![Imgur](https://i.imgur.com/07bAawS.png)
+![Imgur](https://i.imgur.com/hyLXEwT.png)
 
 ## MVP/PostMVP
 
