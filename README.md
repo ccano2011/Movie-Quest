@@ -109,10 +109,10 @@ This project will also use Airtable to store movies the user wants to save for l
 |  Day | Deliverable | Status
 |---|---| ---|
 |10-09-20| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|10-09-20| Project Approval | Incomplete
-|10-11-20| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|10-12-20| Pseudocode / actual code | Incomplete
-|10-14-20| Initial Clickable Model  | Incomplete
+|10-09-20| Project Approval | Complete
+|10-11-20| React component: */* | Incomplete
+|10-12-20| Initial Clickable Model | Incomplete
+|10-14-20| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |10-14-20| MVP | Incomplete
 |10-16-20| Presentations | Incomplete
 
