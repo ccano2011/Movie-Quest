@@ -150,5 +150,6 @@ This project will also use Airtable to store movies the user wants to save for l
 
 ## Change Log:
 
-    Any changes to the project will be reflected here
+    10/09/20: 
+        - Moved the "genre-picking" to Post MVP to prioritize efficiency in coding the basic functionality for the major components
 

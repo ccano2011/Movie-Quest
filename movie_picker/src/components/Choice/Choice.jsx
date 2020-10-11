@@ -1,8 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+// import React from "react";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
 
-function Choice(props) {
+// function Choice(props) {
     //    The following is a reference code from Create Review:
     // const [title, setTitle] = useState("There aren't any.");
     // const [text, setText] = useState("RIP");
@@ -42,10 +42,12 @@ function Choice(props) {
     //      
     //     </div>
     // )
-    const popularMovies = async (e) => {
-        e.preventDefault();
+//     const popularMovies = async (e) => {
+//         e.preventDefault();
+//         const popularMoviesEndpoint = `https://api.themoviedb.org/3/trending/movie/week?${process.env.REACT_APP_TMDB_KEY}/`
+//         console.log(popularMoviesEndpoint)
+//         //api_key=78e57902e37048223b1cc02af5aa0a7d
+//     }
+// }
 
-    }
-}
-
-export default Choice
+// export default Choice
