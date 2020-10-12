@@ -15,12 +15,14 @@ function Options(props) {
         popularMovies();
     }, []);
 
+
+
     const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
         popEndpoint.map((movie) => (
             <div>
-                <img src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
                 <p className="title">{movie.title} <br /></p>
+                <img src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
                 <p className="plotSummary">{movie.overview} <br /></p>
                 <p className="userScore">User ratings: {movie.vote_average}/10</p>
             </div>

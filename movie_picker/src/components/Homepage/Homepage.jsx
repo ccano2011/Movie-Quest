@@ -9,18 +9,22 @@ function Homepage(props) {
                 <h5>Find what to watch</h5>
             </div>
             <div className="popularList">
-                {/* Redirects to Choice Component */}
+                {/* Redirects to options Component */}
                 <Link to="/options">
                     <button>See what's popular now!</button>
                 </Link>
             </div>
             {/* <div className="bestOf"> */}
-            {/* Redirects to Options Component */}
+            {/* Redirects to Choise Component */}
+            {/* <Link to="/choice"> */}
             {/* <button>Find the best movies by Year & Genre</button> */}
+            {/* </Link> */}
             {/* </div> */}
             <div className="myList">
                 {/* Redirects to List Component */}
-                <button>My List</button>
+                <Link to="list">
+                    <button>My List</button>
+                </Link>
             </div>
         </>
     );
