@@ -1,7 +1,7 @@
-import React from 'react';
-import axios from 'axios';
+// import React from 'react';
+// import axios from 'axios';
 
-function List(props) {
+// function List(props) {
     //    The following is a reference code from Create Review:
     // const [title, setTitle] = useState("There aren't any.");
     // const [text, setText] = useState("RIP");
@@ -38,16 +38,16 @@ function List(props) {
     //Refer to "return in CreateReview.jsx"
     // return (
     //     <div>
-    //      
+
     //     </div>
     // )
-//     const popularMovies = async (e) => {
-//         e.preventDefault();
-//         const popularMoviesEndpoint = `https://api.themoviedb.org/3/trending/movie/week?${process.env.REACT_APP_TMDB_KEY}/`
-//         console.log(popularMoviesEndpoint)
-//         //api_key=78e57902e37048223b1cc02af5aa0a7d
-//     }
-// }
+    //     const popularMovies = async (e) => {
+    //         e.preventDefault();
+    //         const popularMoviesEndpoint = `https://api.themoviedb.org/3/trending/movie/week?${process.env.REACT_APP_TMDB_KEY}/`
+    //         console.log(popularMoviesEndpoint)
+    //         //api_key=78e57902e37048223b1cc02af5aa0a7d
+    //     }
+    // }
 
 
-// export default List;
+    // export default List;
