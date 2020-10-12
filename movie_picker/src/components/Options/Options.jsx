@@ -10,7 +10,7 @@ function Options() {
         const popularMovies = async (e) => {
             // e.preventDefault();
             const popularMoviesEndpoint = await axios.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_TMDB_KEY}`)
-            fetchPopEndpoint(popularMoviesEndpoint.data.results)
+            fetchPopEndpoint(popularMoviesEndpoint.data.results.slice(0 - 9))
             // console.log(popMovies)
             // fetchPopEndpoint(popularMoviesEndpoint.data.results[0].title);
         }
@@ -26,17 +26,17 @@ function Options() {
     // console.log(listItems)
     const imageURL = `https://image.tmdb.org/t/p/w500`
 
-    let title = []
-    let overview = []
-    let rating = []
-    let poster = []
-    for (let i in popEndpoint) {
-        title.push(popEndpoint[i].title)
-        overview.push(popEndpoint[i].overview)
-        rating.push(popEndpoint[i].vote_average)
-        poster.push(imageURL + popEndpoint[i].poster_path)
-        // console.log(title)
-    }
+    // let title = []
+    // let overview = []
+    // let rating = []
+    // let poster = []
+    // for (let i in popEndpoint) {
+    //     title.push(popEndpoint[i].title)
+    //     overview.push(popEndpoint[i].overview)
+    //     rating.push(popEndpoint[i].vote_average)
+    //     poster.push(imageURL + popEndpoint[i].poster_path)
+    //     // console.log(title)
+    // }
     // console.log(poster)
     // console.log(title)
     // console.log(overview)
