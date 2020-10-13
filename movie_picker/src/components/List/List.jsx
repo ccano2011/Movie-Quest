@@ -14,12 +14,14 @@ function List(props) {
                     Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
                 },
             });
-            setMyList(response.data.records);
+            setFetchList(response.data.records);
         };
         getList();
-    }, [fetchList]);
+    }, []);
 
-    console.log()
+
+    console.log(fetchList)
+
 
     return (
         //     popEndpoint.map((movie) => (
