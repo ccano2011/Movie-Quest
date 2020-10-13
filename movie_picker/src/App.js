@@ -12,7 +12,6 @@ import Options from "./components/Options/Options";
 
 function App() {
   const [fetchList, setFetchList] = useState([]);
-  const [deleteItem, setDeleteItem] = useState();
   // toggle the useEffect
   useEffect(() => {
     const getList = async () => {
