@@ -47,7 +47,6 @@ function Options(props) {
                 <button onClick={() => handleSubmit(movie)}>Add to My List!</button>
             </div>
         ))
-
     );
 }
 
