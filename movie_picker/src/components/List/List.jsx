@@ -3,8 +3,7 @@ import axios from "axios";
 
 
 function List(props) {
-    const [myList, setMyList] = useState()
-    const [fetchList, setFetchList] = useState()
+    const [fetchList, setFetchList] = useState([])
 
     useEffect(() => {
         const getList = async () => {
@@ -19,20 +18,37 @@ function List(props) {
         getList();
     }, []);
 
+    const myList = async (list) => {
+        const fields = {
+            title: title,
+            poster: poster,
+            userRating: userRating,
+        };
+        fetchList.response.data.records
+    }
+
 
     console.log(fetchList)
-
+    // 0:
+    // createdTime: "2020-10-13T00:15:58.000Z"
+    // fields:
+    // poster: "https://image.tmdb.org/t/p/w500/riYInlsq2kf1AWoGm80JQW5dLKp.jpg"
+    // title: "Enola Holmes"
+    // userRating: 7.6
+    // __proto__: Object
+    // id: "rec6RHSEDpAXeTSVf"
+    // __proto__: Object
 
     return (
-        //     popEndpoint.map((movie) => (
-        //         <div key={list.id}>
-        //             <img src={list.} alt={"poster for" + movie.title} value={movie.poster} /> <br />
-        //             <p className="title" value={title}>{movie.title} <br /></p>
-        //             <p className="plotSummary">{movie.overview} <br /></p>
-        //             <p className="userScore" value={userRating}>User ratings: {movie.vote_average}/10</p>
-        //         </div>
-        // ))
-        <> </>
+        fetchList.map((list) => (
+            <div key={list.id}>
+                <img src={list.poster} alt={"poster for" + list.title} value={list.poster} /> <br />
+                <p className="title" value={list.title}>{list.title} <br /></p>
+                {/* <p className="plotSummary">{movie.overview} <br /></p> */}
+                <p className="userScore" value={list.userRating}>User ratings: {list.userRating}/10</p>
+            </div>
+        ))
+
     )
 }
 
