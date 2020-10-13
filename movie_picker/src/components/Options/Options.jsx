@@ -5,9 +5,6 @@ import axios from 'axios';
 
 function Options(props) {
     const [popEndpoint, fetchPopEndpoint] = useState([]);
-    const [title, setTitle] = useState("");
-    const [poster, setPoster] = useState("");
-    const [userRating, setUserRating] = useState("")
 
     useEffect(() => {
         const popularMovies = async () => {
@@ -32,21 +29,21 @@ function Options(props) {
             REACT_APP_AIRTABLE_BASE}/list`
         await axios.post(airTableURL, { fields }, {
             headers: {
-                Authorization: `Bearer ${process.env.
-                    REACT_APP_AIRTABLE_KEY}`
+                Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
             },
         });
         // props.setFetchReviews(!props.setFetchReviews);
     }
 
+    console.log(popEndpoint)
     const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
         popEndpoint.map((movie) => (
             <div key={movie.id}>
-                <img src={imageURL + movie.poster_path} alt={"poster for" + movie.title} value={movie.poster} /> <br />
-                <p className="title" value={title}>{movie.title} <br /></p>
+                <img src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                <p className="title">{movie.title} <br /></p>
                 <p className="plotSummary">{movie.overview} <br /></p>
-                <p className="userScore" value={userRating}>User ratings: {movie.vote_average}/10</p>
+                <p className="userScore" >User ratings: {movie.vote_average}/10</p>
                 <button onClick={() => handleSubmit(movie)}>Add to My List!</button>
             </div>
         ))

@@ -1,34 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-
+import React from "react";
 
 function List(props) {
-    const [fetchList, setFetchList] = useState([])
-
-    useEffect(() => {
-        const getList = async () => {
-            const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/list`;
-            const response = await axios.get(airtableURL, {
-                headers: {
-                    Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
-                },
-            });
-            setFetchList(response.data.records);
-        };
-        getList();
-    }, []);
-
-    const myList = async (list) => {
-        const fields = {
-            title: title,
-            poster: poster,
-            userRating: userRating,
-        };
-        fetchList.response.data.records
-    }
-
-
-    console.log(fetchList)
     // 0:
     // createdTime: "2020-10-13T00:15:58.000Z"
     // fields:
@@ -38,18 +10,20 @@ function List(props) {
     // __proto__: Object
     // id: "rec6RHSEDpAXeTSVf"
     // __proto__: Object
-
+    console.log(props.fetchList)
     return (
-        fetchList.map((list) => (
-            <div key={list.id}>
-                <img src={list.poster} alt={"poster for" + list.title} value={list.poster} /> <br />
-                <p className="title" value={list.title}>{list.title} <br /></p>
-                {/* <p className="plotSummary">{movie.overview} <br /></p> */}
-                <p className="userScore" value={list.userRating}>User ratings: {list.userRating}/10</p>
-            </div>
-        ))
-
+        <div>
+            {
+                props.fetchList.map((movie) => (
+                    <div key={movie.id}>
+                        <img src={movie.fields.poster} alt={"poster for" + movie.fields.title} /> <br />
+                        <p className="title" >{movie.fields.title} <br /></p>
+                        {/* <p className="plotSummary">{movie.overview} <br /></p> */}
+                        <p className="userScore" >User ratings: {movie.fields.userRating}/10</p>
+                    </div>
+                ))
+            }
+        </div>
     )
 }
-
 export default List;
