@@ -10,12 +10,12 @@ function Homepage(props) {
                     <button>See what's popular now!</button>
                 </Link>
             </div>
-            {/* <div className="pickButton"> */}
-            {/* Redirects to Pick Component */}
-            {/* <Link to="/pick"> */}
-            {/* <button>Find the best movies by Year & Genre</button> */}
-            {/* </Link> */}
-            {/* </div> */}
+            <div className="pickButton">
+                {/* Redirects to Pick Component */}
+                <Link to="/pick">
+                    <button>Find the best movies by Year & Genre</button>
+                </Link>
+            </div>
             <div className="myListButton">
                 {/* Redirects to List Component */}
                 <Link to="list">
