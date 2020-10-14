@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+import Pick from './components/Pick/Pick';
 
-
-function Choices(props) {
-    const [popEndpoint, fetchPopEndpoint] = useState([]);
+function MovieInfo(props) {
     const [added, setAdded] = useState(false)
-    useEffect(() => {
-        const popularMovies = async () => {
-            const popularMoviesEndpoint = await axios.get(
-                `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_TMDB_KEY}`
-            );
-            fetchPopEndpoint(popularMoviesEndpoint.data.results.slice(0, 10));
-        };
-        popularMovies();
-    }, []);
-
-    console.log(popEndpoint)
-
     const handleSubmit = async (movie) => {
         setAdded(true);
         let image = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
@@ -34,22 +21,18 @@ function Choices(props) {
         props.setFetchList(!props.fetchList);
         // setAdded(false);
     }
-
-    console.log(popEndpoint)
-    const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
-        popEndpoint.map((movie) => (
+        props.bestOfYear.map((movie) => (
             <div key={movie.id}>
-                <img src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                {/* <img src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br /> */}
                 <p className="title">{movie.title} <br /></p>
                 <p className="plotSummary">{movie.overview} <br /></p>
                 <p className="userScore" >User ratings: {movie.vote_average}/10</p>
                 <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
             </div>
         ))
+
     );
 }
 
-export default Choices;
-
-//
+export default MovieInfo;

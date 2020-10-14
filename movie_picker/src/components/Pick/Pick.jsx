@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { Link, } from 'react-router-dom'
 import axios from "axios";
 
 function Pick() {
     const [bestOfYear, setBestOfYear] = useState([]);
     // const [added, setAdded] = useState(false)
-    const [year, setYear] = useState()
+    const [year, setYear] = useState("1999")
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -19,20 +20,37 @@ function Pick() {
     };
 
     console.log(bestOfYear)
+    const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="number"
-                    name="clicks"
-                    placeholder="e.g. 1999"
-                    value={year}
-                    onChange={(event) => {
-                        setYear(event.target.value)
-                    }}
-                />
-                <button type="submit">Submit Year</button>
-            </form>
+            <div className="bestOfYear">
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="number"
+                        name="clicks"
+                        placeholder="1999"
+                        value={year}
+                        min="1900" max={new Date().getFullYear()}
+                        onChange={(event) => {
+                            setYear(event.target.value)
+                        }}
+                    />
+                    <button type="submit">Submit Year</button>
+                </form>
+            </div>
+            <div>
+                {bestOfYear.map((movie) => (
+                    <div key={movie.id}>
+                        <Link to="movieInfo">
+                            <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                        </Link>
+                        {/* <p className="title">{movie.title} <br /></p>
+                        <p className="plotSummary">{movie.overview} <br /></p>
+                        <p className="userScore" >User ratings: {movie.vote_average}/10</p> */}
+                        {/* <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button> */}
+                    </div>
+                ))}
+            </div>
         </div >
     );
 }

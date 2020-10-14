@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import Pick from './components/Pick/Pick'
 import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
+import MovieInfo from "./MovieInfo";
 import Navbar from "./components/Navbar/Navbar";
 import Choices from "./components/Choices/Choices";
 //import ".App.css"
@@ -54,6 +55,12 @@ function App() {
                 setFetchList={setFetchList}
                 setList={setList}
                 fetchList={fetchList} />
+            </Route>
+          </div>
+          <div className="movieInfo">
+            <Route path="/movieInfo">
+              <MovieInfo
+              />
             </Route>
           </div>
         </div>

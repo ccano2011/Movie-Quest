@@ -101,7 +101,8 @@ This project will also use Airtable to store movies the user wants to save for l
 #### PostMVP  
 
 - Add a component that will allow users to search by up to 2 genres and return user to "Results"
-- Add a link to a google search with the movie title as an extension like a query string: (https://www.google.com/search?q={MOVIE_TITLE_PASSED_HERE})
+- Add a "Dark Mode" styling
+- "Change 'Added to My List' button to a 'Remove from My List' within the 'Choice' component"
 - Use local storage to save user's List
 
 ## Project Schedule
@@ -142,7 +143,7 @@ This project will also use Airtable to store movies the user wants to save for l
 ### Strengths:
     Resourcefulness in looking up information
 ### Weaknesses:
-    Class components
+    Class components, .map(), 
 ### Opportunities:
     This will be an incredible way to reinforce React and hopefully learn a lot!
 ### Threats:
@@ -159,3 +160,10 @@ This project will also use Airtable to store movies the user wants to save for l
             - Moved the code within "Options" to "Choices" for better organization 
         Component Hierarchy updated to appropriately reflect the changes.
         - Updated deliverables on Timeframes.
+
+    10/14/20:
+        - Added 2 additional "Post-MVPs":
+            - "Add a 'Dark Theme'"
+            - "Change 'Added to My List' button to a 'Remove from My List' within the 'Choice' component"
+        - Removed an unnessary "Post-MVP":
+            - "Add a link to a google search with the movie title as an extension like a query string: (https://www.google.com/search?q={MOVIE_TITLE_PASSED_HERE})"
