@@ -4,23 +4,19 @@ function Homepage(props) {
 
     return (
         <>
-            <div className="homePageTitle">
-                <h1>Movie Quest!</h1>
-                <h5>Find what to watch</h5>
-            </div>
             <div className="popularList">
                 {/* Redirects to options Component */}
-                <Link to="/options">
+                <Link to="/choices">
                     <button>See what's popular now!</button>
                 </Link>
             </div>
-            {/* <div className="bestOf"> */}
-            {/* Redirects to Choise Component */}
-            {/* <Link to="/choice"> */}
+            {/* <div className="pickButton"> */}
+            {/* Redirects to Pick Component */}
+            {/* <Link to="/pick"> */}
             {/* <button>Find the best movies by Year & Genre</button> */}
             {/* </Link> */}
             {/* </div> */}
-            <div className="myList">
+            <div className="myListButton">
                 {/* Redirects to List Component */}
                 <Link to="list">
                     <button>My List</button>

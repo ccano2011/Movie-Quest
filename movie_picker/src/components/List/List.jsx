@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 function List(props) {
+    //This Rerender state was found on stack overflow
 
     const handleDelete = async (id) => {
         setTimeout(async () => {
@@ -10,7 +11,7 @@ function List(props) {
                     Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
                 },
             });
-            // props.setFetchList();
+            props.setFetchList(!props.fetchList);
         }, 200);
     };
 
@@ -18,7 +19,7 @@ function List(props) {
     return (
         <div>
             {
-                props.fetchList.map((movie) => (
+                props.list.map((movie) => (
                     <div key={movie.id}>
                         <img src={movie.fields.poster} alt={"poster for" + movie.fields.title} /> <br />
                         <p className="title" >{movie.fields.title} <br /></p>

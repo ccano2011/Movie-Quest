@@ -85,7 +85,7 @@ This project will also use Airtable to store movies the user wants to save for l
 ```
 
 ## Component Hierarchy
-![Imgur](https://i.imgur.com/52W3RBW.png)
+![Imgur](https://i.imgur.com/Q3FlUVB.png)
 
 ## MVP/PostMVP
 
@@ -110,23 +110,23 @@ This project will also use Airtable to store movies the user wants to save for l
 |---|---| ---|
 |10-09-20| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |10-09-20| Project Approval | Complete
-|10-11-20| React component: */* | Incomplete
-|10-12-20| Initial Clickable Model | Incomplete
-|10-14-20| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|10-14-20| MVP | Incomplete
+|10-14-20| React component: */* | Complete
+|10-14-20| Initial Clickable Model | Incomplete
+|10-15-20| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|10-15-20| MVP | Incomplete
 |10-16-20| Presentations | Incomplete
 
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Initial Pseudocode/Planning & App component structure| H | 2hrs| hrs | hrs |
-| Add axios to return "Popular Movies" from TMDB API w/ Query strings| H | 2hrs| hrs | hrs |
-| Create React component */* for the Homepage with Button for "Show me what's popular" | H | 4hrs| hrs | hrs |
-| Have Button redirect user to */choice/:query* | H | 3hrs| hrs | hrs |
-| Add axios to */choice/:query* from Airtable and create "Add to My List" Button | H | 4hrs| hrs | hrs |
-| Have */choice/:query* return a list of results for "Popular Movies" | H | 4hrs| hrs | hrs |
-| Allow user to select a movie from */choice/:query* and add it to "My List" | H | 4hrs| hrs | hrs |
+| Initial Pseudocode/Planning & App component structure| H | 2hrs| 3hrs | hrs |
+| Add axios to return "Popular Movies" from TMDB API w/ Query strings| H | 2hrs| 2hrs | hrs |
+| Create React component */* for the Homepage with Button for "Show me what's popular" | H | 4hrs| 5hrs | hrs |
+| Have Button redirect user to */choices/:query* | H | 3hrs| 30min | hrs |
+| Add axios to */choices/:query* from Airtable and create "Add to My List" Button | H | 4hrs| 5hrs | hrs |
+| Have */choices/:query* return a list of results for "Popular Movies" | H | 4hrs| 2hrs | hrs |
+| Allow user to select a movie from */hoices/:query* and add it to "My List" | H | 4hrs| 4hrs | hrs |
 | Create */pick/:menu* for the "Best of genre/year" with options for users to use dropdown selection for either genre or year  | H | 4hrs| hrs | hrs |
 | Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| hrs | hrs |
 | After MVP functionality is completed, begin initial CSS styling for "Homepage"| H | 3hrs| hrs | hrs |
@@ -153,3 +153,9 @@ This project will also use Airtable to store movies the user wants to save for l
     10/09/20: 
         - Moved the "genre-picking" to Post MVP to prioritize efficiency in coding the basic functionality for the major components
 
+    10/13/20:
+        - Made the following changes to the component hierarchy:
+            - Removed "Options" component
+            - Moved the code within "Options" to "Choices" for better organization 
+        Component Hierarchy updated to appropriately reflect the changes.
+        - Updated deliverables on Timeframes.

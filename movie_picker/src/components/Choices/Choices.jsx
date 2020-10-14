@@ -3,9 +3,9 @@ import axios from 'axios';
 // import { Link, Route } from 'react-router-dom'
 
 
-function Options(props) {
+function Choices(props) {
     const [popEndpoint, fetchPopEndpoint] = useState([]);
-
+    const [added, setAdded] = useState(false)
     useEffect(() => {
         const popularMovies = async () => {
             const popularMoviesEndpoint = await axios.get(
@@ -19,20 +19,21 @@ function Options(props) {
     console.log(popEndpoint)
 
     const handleSubmit = async (movie) => {
+        setAdded(true);
         let image = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
         const fields = {
             title: movie.title,
             poster: image,
             userRating: movie.vote_average,
         };
-        const airTableURL = `https://api.airtable.com/v0/${process.env.
-            REACT_APP_AIRTABLE_BASE}/list`
+        const airTableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/list`
         await axios.post(airTableURL, { fields }, {
             headers: {
                 Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
             },
         });
-        // props.setFetchReviews(!props.setFetchReviews);
+        props.setFetchList(!props.fetchList);
+        // setAdded(false);
     }
 
     console.log(popEndpoint)
@@ -44,12 +45,12 @@ function Options(props) {
                 <p className="title">{movie.title} <br /></p>
                 <p className="plotSummary">{movie.overview} <br /></p>
                 <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                <button onClick={() => handleSubmit(movie)}>Add to My List!</button>
+                <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
             </div>
         ))
     );
 }
 
-export default Options;
+export default Choices;
 
 //

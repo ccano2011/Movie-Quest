@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 //Componenets are imported below:
-// import Choice from './components/Choice/Choice'
+import Pick from './components/Pick/Pick'
 import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
-import Options from "./components/Options/Options";
+import Choices from "./components/Choices/Choices";
 //import ".App.css"
 
 
 function App() {
-  const [fetchList, setFetchList] = useState([]);
+  const [fetchList, setFetchList] = useState(false);
+  const [list, setList] = useState([]);
   // toggle the useEffect
   useEffect(() => {
     const getList = async () => {
@@ -21,11 +22,11 @@ function App() {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
         },
       });
-      setFetchList(response.data.records);
+      setList(response.data.records);
     };
     getList();
     // toggle the useEffect
-  }, []);
+  }, [fetchList]);
 
   return (
     <div className="App">
@@ -38,12 +39,21 @@ function App() {
           <Route exact path="/">
             <Homepage />
           </Route>
-          <Route path="/options">
-            <Options />
+          <Route path="/pick">
+            <Pick />
+          </Route>
+          <Route path="/Choices">
+            <Choices
+              setFetchList={setFetchList}
+              fetchList={fetchList} />
           </Route>
           <div className="myList">
             <Route path="/list">
-              <List fetchList={fetchList} />
+              <List
+                list={list}
+                setFetchList={setFetchList}
+                setList={setList}
+                fetchList={fetchList} />
             </Route>
           </div>
         </div>
