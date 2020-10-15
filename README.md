@@ -85,7 +85,7 @@ This project will also use Airtable to store movies the user wants to save for l
 ```
 
 ## Component Hierarchy
-![Imgur](https://i.imgur.com/Q3FlUVB.png)
+![Imgur](https://i.imgur.com/Vbv4M6N.png)
 
 ## MVP/PostMVP
 
@@ -167,3 +167,6 @@ This project will also use Airtable to store movies the user wants to save for l
             - "Change 'Added to My List' button to a 'Remove from My List' within the 'Choice' component"
         - Removed an unnessary "Post-MVP":
             - "Add a link to a google search with the movie title as an extension like a query string: (https://www.google.com/search?q={MOVIE_TITLE_PASSED_HERE})"
+        - Made the following changes to the component hierarchy:
+            - Removed "MovieInfo" Component for simplicity and to ensure a better, feature complete version upon deliverable
+            - Added "Footer" component to satisfy TMDB's Terms & Conditions for use of their API and credit them on every component of the app
