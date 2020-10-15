@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 //FOR BEST OF YEAR & GENRE
@@ -9,18 +9,21 @@ function Pick(props) {
     const [added, setAdded] = useState(false)
     const [genre, setGenre] = useState([])
     //passing the input values from the dropdown and storing it in state was from a solution found in stack overflow
-    const [dropdownValue, setdropdownValue] = useState(878)
+    const [dropdownValue, setdropdownValue] = useState(1)
 
-    const handleGenre = () => {
+
+    useEffect(() => {
         console.log(dropdownValue)
+        const genreURL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&with_genres=${dropdownValue}&language=en-US&sort_by=vote_average.desc&include_adult=false&include_video=false&page=1&vote_count.gte=500`
         const fetchMovies = async () => {
             const movieEndpoint = await axios.get(
-                `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&with_genres=${dropdownValue}&language=en-US&sort_by=vote_average.desc&include_adult=false&include_video=false&page=1&vote_count.gte=500`);
+                genreURL)
             setGenre(movieEndpoint.data.results)
         }
         fetchMovies();
-    };
-    console.log(genre)
+        //We needed to pass down dropdownValue to fulfill the dependency requirement!!
+    }, [dropdownValue])
+
 
     const handleYear = (e) => {
         e.preventDefault()
@@ -49,9 +52,7 @@ function Pick(props) {
         });
         props.setFetchList(!props.fetchList);
     }
-    const changeGenre = (e) => {
-        setdropdownValue(e)
-    }
+
     const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
         <div>
@@ -75,7 +76,7 @@ function Pick(props) {
                 <h3 className="divTitle">Select a Genre!</h3>
                 <form id="dropdown">
                     {/* This onChange function was inspired by 2 solutions on stack overflow */}
-                    <select onChange={(e) => { changeGenre(e.target.value); setTimeout(() => handleGenre(), 500) }} value={dropdownValue} >
+                    <select onChange={(e) => setdropdownValue(e.target.value)} value={dropdownValue} >
                         <option value="1">Select a Genre</option>
                         <option value="28">Action</option>
                         <option value="12">Adventure</option>
