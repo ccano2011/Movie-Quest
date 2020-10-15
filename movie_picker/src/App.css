@@ -1,20 +1,21 @@
 .App {
   min-height: 100%;
-
+  margin-top: 100px;
 }
-/* .Foot {
-  position: fixed;
-  bottom:0;
-  width: fit-content;
-} */
 
 .footerLinks {
-  /* max-height: 70px; */
-  /* min-height: 30px; */
   position: fixed;
   bottom:0;
   width: 100%;
   background-color: darkslategray;
+}
+
+#p{
+  margin-top: 4px;
+  margin-bottom: 0;
+  margin-left: 3px;
+  font-size: 9px;
+  color: aliceblue;
 }
 
 .tmdbLogo {
@@ -27,43 +28,39 @@
   background-color: darkslategray;
 } 
 
-/* .tmdbLogo {
-  display: block;
-  justify-content: left;
-} */
-
 a {
   text-decoration: none;
 }
 
-.Navi {
-  list-style-type: none;
-  position: relative;
-  /* top:0; */
+header {
+  position: fixed;
+  top:0;
   margin: auto;
   padding-top:5px;
   padding-left: 10px;
-  display: inline-flex;
+  /* display: inline-flex; */
   width: 100% ;
   background-color: darkslategray;
 }
 
-/* ul > li solution from Stack Overflow */
-.navUl > .Link{
-  display: inline-block;
-  list-style-type: none;
-  padding-top: 4px;
-  align-items: center;
-  justify-content: center;
-  /* zoom:1; */
+.navLinks {
+  display: inline-flex;
 }
 
 .Link {
   padding-right: 30px;
   padding-left: 30px;
-  display: flex;
+  margin-bottom: 0;
+  display: inline-flex;
   justify-content: center;
+  
 }
 
-/* .navTitle{
-} */
+.Zelda {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 0;
+  display: inline-flex;
+}
+.navTitle{
+}
