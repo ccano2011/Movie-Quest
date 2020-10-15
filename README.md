@@ -103,6 +103,7 @@ This project will also use Airtable to store movies the user wants to save for l
 - Add a component that will allow users to search by up to 2 genres and return user to "Results"
 - Add a "Dark Mode" styling
 - "Change 'Added to My List' button to a 'Remove from My List' within the 'Choice' component"
+- Change the form elements in the "Pick" component to a pre-populated drop-down menu
 - Use local storage to save user's List
 
 ## Project Schedule
@@ -127,9 +128,9 @@ This project will also use Airtable to store movies the user wants to save for l
 | Have Button redirect user to */choices/:query* | H | 3hrs| 30min | hrs |
 | Add axios to */choices/:query* from Airtable and create "Add to My List" Button | H | 4hrs| 5hrs | hrs |
 | Have */choices/:query* return a list of results for "Popular Movies" | H | 4hrs| 2hrs | hrs |
-| Allow user to select a movie from */hoices/:query* and add it to "My List" | H | 4hrs| 4hrs | hrs |
-| Create */pick/:menu* for the "Best of genre/year" with options for users to use dropdown selection for either genre or year  | H | 4hrs| hrs | hrs |
-| Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| hrs | hrs |
+| Allow user to select a movie from */choices/:query* and add it to "My List" | H | 4hrs| 4hrs | hrs |
+| Create */pick/:menu* for the "Best of genre/year" with options for users to input either genre or year  | H | 4hrs| 5hrs | hrs |
+| Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| 3hrs | hrs |
 | After MVP functionality is completed, begin initial CSS styling for "Homepage"| H | 3hrs| hrs | hrs |
 | CSS styling for "Popular Movies" | H | 3hrs| hrs | hrs |
 | CSS styling for "Results" | H | 3hrs| hrs | hrs |
@@ -143,7 +144,7 @@ This project will also use Airtable to store movies the user wants to save for l
 ### Strengths:
     Resourcefulness in looking up information
 ### Weaknesses:
-    Class components, .map(), 
+    Class components, .map() functions
 ### Opportunities:
     This will be an incredible way to reinforce React and hopefully learn a lot!
 ### Threats:
@@ -162,11 +163,13 @@ This project will also use Airtable to store movies the user wants to save for l
         - Updated deliverables on Timeframes.
 
     10/14/20:
-        - Added 2 additional "Post-MVPs":
+        - Added 3 additional "Post-MVPs":
             - "Add a 'Dark Theme'"
             - "Change 'Added to My List' button to a 'Remove from My List' within the 'Choice' component"
+            - Change the forms on the "Pick" component to drop down selections
         - Removed an unnessary "Post-MVP":
             - "Add a link to a google search with the movie title as an extension like a query string: (https://www.google.com/search?q={MOVIE_TITLE_PASSED_HERE})"
         - Made the following changes to the component hierarchy:
             - Removed "MovieInfo" Component for simplicity and to ensure a better, feature complete version upon deliverable
             - Added "Footer" component to satisfy TMDB's Terms & Conditions for use of their API and credit them on every component of the app
+        - Changed the dropdown feature to a form for simplicity and to ensure on-time deliverable
