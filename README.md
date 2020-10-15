@@ -10,7 +10,7 @@ Let's be honest: We've all spent more time scrolling to find something to watch 
 
 If only there was a way to help alleviate this paradox of choice....
 
-Enter: Movie Quest! It is a web application that allows users to see what movies are popular right now, find a movie to watch by specifying up to 2 genres and have Movie Quest return a recommendation, or find the best movies by year by leveraging the The Movie Database (https://developers.themoviedb.org/) api! Users can also save titles that interest them to a list hosted by Airtable so they can return to it at a later time.
+Enter: Movie Quest! It is a web application that allows users to see what movies are popular right now, find a movie to watch by checking out what what's popular, and find recommendations based on genre & user rating. This takes the guess work out of finding something to watch by leveraging the The Movie Database (https://developers.themoviedb.org/) api! Users can also save titles that interest them to a list hosted by Airtable so they can return to it at a later time.
 
 
 ## Wireframes
@@ -92,8 +92,8 @@ This project will also use Airtable to store movies the user wants to save for l
 #### MVP 
 
 - Leverage the TMDb API with Query Strings to return "Popular Movies"
-- Have a component that will direct you to "Results"
-- Allow the user to save the result (Title, Poster, Release Year, Runtime) to Airtable
+- Have a component that will direct you to "List"
+- Allow the user to save the result (Title, Poster, Plot Summary, & User Rating) to Airtable
 - Render appropriate movie information and images to the DOM
 - Make a second component that will allow for Query strings to return results that gives the "best of" & "genre"
 - Properly style the compenents in the app
@@ -113,7 +113,7 @@ This project will also use Airtable to store movies the user wants to save for l
 |10-09-20| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |10-09-20| Project Approval | Complete
 |10-14-20| React component: */* | Complete
-|10-14-20| Initial Clickable Model | Incomplete
+|10-14-20| Initial Clickable Model | Complete
 |10-15-20| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |10-15-20| MVP | Incomplete
 |10-16-20| Presentations | Incomplete
@@ -130,12 +130,12 @@ This project will also use Airtable to store movies the user wants to save for l
 | Have */choices/:query* return a list of results for "Popular Movies" | H | 4hrs| 2hrs | hrs |
 | Allow user to select a movie from */choices/:query* and add it to "My List" | H | 4hrs| 4hrs | hrs |
 | Create */pick/:menu* for the "Best of genre/year" with options for users to input either genre or year  | H | 4hrs| 5hrs | hrs |
-| Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| 3hrs | hrs |
+| Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| 4hrs | hrs |
 | After MVP functionality is completed, begin initial CSS styling for "Homepage"| H | 3hrs| hrs | hrs |
 | CSS styling for "Popular Movies" | H | 3hrs| hrs | hrs |
-| CSS styling for "Results" | H | 3hrs| hrs | hrs |
+| CSS styling for "Choice" | H | 3hrs| hrs | hrs |
 | CSS styling for "My List" | H | 3hrs| hrs | hrs |
-| CSS styling for "Best of genre/year" | H | 3hrs| hrs | hrs |
+| CSS styling for "Pick" | H | 3hrs| hrs | hrs |
 | CSS styling for Mobile & Tablet | H | 3hrs| hrs | hrs |
 | Total | H | 49hrs| hrs | hrs |
 
