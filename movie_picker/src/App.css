@@ -1,21 +1,36 @@
+.App {
+  min-height: 100%;
 
-
-.tmdbLogo {
-  height: 50px;
-  min-height: 30px;
 }
-
-.footerUl {
-  list-style-type: none;
-  position: relative;
+/* .Foot {
+  position: fixed;
   bottom:0;
-  margin: 0;
-  padding-top:5px;
-  padding-left: 10px;
-  display: inline-flex;
-  width: 100% ;
+  width: fit-content;
+} */
+
+.footerLinks {
+  /* max-height: 70px; */
+  /* min-height: 30px; */
+  position: fixed;
+  bottom:0;
+  width: 100%;
   background-color: darkslategray;
 }
+
+.tmdbLogo {
+  max-height: 50px;
+  min-height: 30px;
+  width: 50px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  background-color: darkslategray;
+} 
+
+/* .tmdbLogo {
+  display: block;
+  justify-content: left;
+} */
 
 a {
   text-decoration: none;
@@ -30,4 +45,25 @@ a {
   padding-left: 10px;
   display: inline-flex;
   width: 100% ;
+  background-color: darkslategray;
 }
+
+/* ul > li solution from Stack Overflow */
+.navUl > .Link{
+  display: inline-block;
+  list-style-type: none;
+  padding-top: 4px;
+  align-items: center;
+  justify-content: center;
+  /* zoom:1; */
+}
+
+.Link {
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* .navTitle{
+} */
