@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Route } from "react-router-dom";
 //Componenets are imported below:
-import Pick from './components/Pick/Pick'
+import Choices from "./components/Choices/Choices";
+import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
-
 import Navbar from "./components/Navbar/Navbar";
-import Choices from "./components/Choices/Choices";
+import Pick from './components/Pick/Pick';
 //import ".App.css"
 
 
@@ -60,12 +60,6 @@ function App() {
                 fetchList={fetchList} />
             </Route>
           </div>
-          {/* <div className="movieInfo">
-            <Route path="/movieInfo">
-              <MovieInfo
-              />
-            </Route>
-          </div> */}
         </div>
         {/* <div className="bestOf"> */}
         {/* Redirects to Pick Component */}
@@ -75,6 +69,9 @@ function App() {
         {/* Redirects to List Component */}
         {/* <button>My List</button> */}
         {/* </div> */}
+        <footer>
+          <Footer />
+        </footer>
       </>
     </div>
   );

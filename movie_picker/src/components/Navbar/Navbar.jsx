@@ -7,7 +7,7 @@ class Navbar extends Component {
             <nav className="Navi">
                 <h1 className="navTitle">Movie Quest</h1>
                 <div className="navLinks">
-                    <ul>
+                    <ul className="navUl">
                         <li>
                             <Link to="/">
                                 Home
