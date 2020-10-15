@@ -8,12 +8,12 @@ class Navbar extends Component {
                 <h1 className="navTitle">Movie Quest</h1>
                 <div className="navLinks">
                     <ul className="navUl">
-                        <li>
+                        <li id="homeLink">
                             <Link to="/">
                                 Home
                             </Link>
                         </li>
-                        <li>
+                        <li id="listLink">
                             <Link to="list">
                                 My List
                             </Link>

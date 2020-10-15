@@ -8,7 +8,7 @@ import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
 import Pick from './components/Pick/Pick';
-//import ".App.css"
+import './App.css'
 
 
 function App() {
