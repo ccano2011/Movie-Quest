@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import Pick from './components/Pick/Pick'
 import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
-import MovieInfo from "./MovieInfo";
+
 import Navbar from "./components/Navbar/Navbar";
 import Choices from "./components/Choices/Choices";
 //import ".App.css"
@@ -41,7 +41,10 @@ function App() {
             <Homepage />
           </Route>
           <Route path="/pick">
-            <Pick />
+            <Pick
+              fetchList={fetchList}
+              setFetchList={setFetchList}
+            />
           </Route>
           <Route path="/Choices">
             <Choices
@@ -57,12 +60,12 @@ function App() {
                 fetchList={fetchList} />
             </Route>
           </div>
-          <div className="movieInfo">
+          {/* <div className="movieInfo">
             <Route path="/movieInfo">
               <MovieInfo
               />
             </Route>
-          </div>
+          </div> */}
         </div>
         {/* <div className="bestOf"> */}
         {/* Redirects to Pick Component */}

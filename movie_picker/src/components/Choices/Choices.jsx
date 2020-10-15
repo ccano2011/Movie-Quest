@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
+//FOR POPULAR MOVIES
 function Choices(props) {
     const [popEndpoint, fetchPopEndpoint] = useState([]);
     const [added, setAdded] = useState(false)
@@ -32,7 +32,6 @@ function Choices(props) {
             },
         });
         props.setFetchList(!props.fetchList);
-        // setAdded(false);
     }
 
     console.log(popEndpoint)
