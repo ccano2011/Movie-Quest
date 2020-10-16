@@ -211,7 +211,7 @@ select {
 }
 .plotSummary {
   max-width: 800px;
-  font-size: xx-large;
+  font-size: x-large;
   margin: auto;
   display: block;
 }
@@ -233,7 +233,7 @@ select {
 }
 .actualButton {
   position: relative;
-  margin: 6rem;
+  margin: 2rem;
   padding: 5rem; 
   border-radius: 1rem;
   justify-content: space-between;
