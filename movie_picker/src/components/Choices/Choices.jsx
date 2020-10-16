@@ -52,5 +52,3 @@ function Choices(props) {
 }
 
 export default Choices;
-
-//
