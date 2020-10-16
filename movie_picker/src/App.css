@@ -1,6 +1,7 @@
 .App {
   min-height: 100%;
   margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .footerLinks {
@@ -40,7 +41,6 @@ header {
   padding-left: 10px;
   display: flex;
   justify-content: flex-start;
-  
   width: 100% ;
   background-color: darkslategray;
 }
@@ -51,8 +51,8 @@ header {
   /* display: inline block; */
   /* justify-content: center; */
   justify-content: flex-start;
+  /* found out how to use flex-grow from https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow */
   flex-grow: 100;
-  
 }
 
 .navbar {
@@ -62,9 +62,61 @@ header {
   position: relative;
   text-align: center;
 }
-
+/* This flexbox trick in particualr came from https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .navbar::after {
   content: "|"; 
   position: absolute;
   right:0;
 } 
+
+.Homepage {
+  margin-top: 5px;
+  padding-bottom: 10px;
+  padding-top:50px;
+  /* padding-left: 10px; */
+  display: flex;
+  justify-content: center;
+  /* width: 70vw; */
+  width:100%;
+  background-color: black;
+}
+
+.HomepageDiv {
+  display: block;
+  flex-grow: .7;
+  background-color: blue;
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  text-align: center;
+
+}
+
+.homeButton {
+  flex: 1;
+  background-color: crimson;
+  align-content: center;
+  margin-top: 30px;
+}
+/* .Homepage {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background-color: black;
+  
+  flex-direction: column;
+}
+
+.HomepageDiv {
+  margin: 0 auto;
+  flex: .8;
+  position: relative;
+  text-align: center;
+  background-color: red;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.homeButton {
+  background-color: blue;
+  justify-content: space-between;
+} */

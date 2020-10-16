@@ -4,11 +4,9 @@ import { Link } from "react-router-dom"
 class Navbar extends Component {
     render() {
         return (
-
-
             <div className="navLinks">
                 <p className="navbar">Movie Quest</p>
-                <p className="navbar"  >
+                <p className="navbar">
                     <Link to="/">
                         Home
                             </Link>
@@ -22,5 +20,4 @@ class Navbar extends Component {
         )
     }
 }
-
 export default Navbar

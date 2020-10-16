@@ -35,32 +35,34 @@ function App() {
         <header>
           <Navbar />
         </header>
-        <div className="body">
-          {/* Route wraps whatever component you want to <Link to="">*/}
+
+        {/* Route wraps whatever component you want to <Link to="">*/}
+        <div className="Homepage">
           <Route exact path="/">
             <Homepage />
           </Route>
-          <Route path="/pick">
-            <Pick
-              fetchList={fetchList}
+        </div>
+        <Route path="/pick">
+          <Pick
+            fetchList={fetchList}
+            setFetchList={setFetchList}
+          />
+        </Route>
+        <Route path="/Choices">
+          <Choices
+            setFetchList={setFetchList}
+            fetchList={fetchList} />
+        </Route>
+        <div className="myList">
+          <Route path="/list">
+            <List
+              list={list}
               setFetchList={setFetchList}
-            />
-          </Route>
-          <Route path="/Choices">
-            <Choices
-              setFetchList={setFetchList}
+              setList={setList}
               fetchList={fetchList} />
           </Route>
-          <div className="myList">
-            <Route path="/list">
-              <List
-                list={list}
-                setFetchList={setFetchList}
-                setList={setList}
-                fetchList={fetchList} />
-            </Route>
-          </div>
         </div>
+
         {/* <div className="bestOf"> */}
         {/* Redirects to Pick Component */}
         {/* <button>Find the best movies by Year & Genre</button> */}
