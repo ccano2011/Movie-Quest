@@ -188,33 +188,6 @@ select {
   margin-bottom: 40px;
 }
 
-@media screen and (max-width:630px) {
-
-  #disclaimer {
-    display:block;
-    margin: auto;
-    width: 50vh;
-    font-size: 12px;
-}
-.pickPoster {
-  max-width: 30vh;
-  min-width: 10vh;
-  margin: auto;
-  display: block;
-}
-.title {
-  font-weight: bold;
-  font-size: 5vh;
-  text-align: center;
-  margin-top: 30px;
-}
-.plotSummary {
-  max-width: 280px;
-  margin: auto;
-  display: block;
-}
-
-}
 
 @media screen and (max-width:1024px) {
 
@@ -308,4 +281,32 @@ select {
   margin-bottom: 20px;
   font-size: xx-large;
 }
+}
+
+@media screen and (max-width:630px) {
+
+#disclaimer {
+  display:block;
+  margin: auto;
+  width: 50vh;
+  font-size: 12px;
+}
+.pickPoster {
+  max-width: 30vh;
+  min-width: 10vh;
+  margin: auto;
+  display: block;
+}
+.title {
+  font-weight: bold;
+  font-size: 5vh;
+  text-align: center;
+  margin-top: 30px;
+}
+.plotSummary {
+  max-width: 280px;
+  margin: auto;
+  display: block;
+}
+
 }

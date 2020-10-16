@@ -30,7 +30,7 @@ function Pick(props) {
         console.log(year)
         const fetchMovies = async () => {
             const movieEndpoint = await axios.get(
-                `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&sort_by=vote_average.desc&include_adult=false&include_video=false&page=1&primary_release_year=${year}&vote_count.gte=500`);
+                `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&sort_by=vote_average.desc&include_adult=false&include_video=false&page=1&primary_release_year=${year}&vote_count.gte=1000`);
             setBestOfYear(movieEndpoint.data.results);
         };
         fetchMovies();
