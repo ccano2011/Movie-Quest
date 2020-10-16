@@ -50,11 +50,13 @@ function App() {
             />
           </Route>
         </div>
-        <Route path="/Choices">
-          <Choices
-            setFetchList={setFetchList}
-            fetchList={fetchList} />
-        </Route>
+        <div className="Choices">
+          <Route path="/Choices">
+            <Choices
+              setFetchList={setFetchList}
+              fetchList={fetchList} />
+          </Route>
+        </div>
         <div className="myList">
           <Route path="/list">
             <List

@@ -23,7 +23,9 @@ function Choices(props) {
         const fields = {
             title: movie.title,
             poster: image,
+            plotSummary: movie.overview,
             userRating: movie.vote_average,
+
         };
         const airTableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/list`
         await axios.post(airTableURL, { fields }, {
@@ -39,11 +41,11 @@ function Choices(props) {
     return (
         popEndpoint.map((movie) => (
             <div key={movie.id}>
-                <img src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
                 <p className="title">{movie.title} <br /></p>
                 <p className="plotSummary">{movie.overview} <br /></p>
                 <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
+                <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
             </div>
         ))
     );
