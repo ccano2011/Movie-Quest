@@ -134,11 +134,12 @@ select {
 }
 .bestOfYear{
   background-color: whitesmoke;
-  display: flex;
+ 
   text-align: center;
-  
+  margin: auto;
+  display: block;
   border: 0.5px solid black;
-  /* max-width: 30%; */
+  max-width: 30%;
 }
 
 #oR{
@@ -150,8 +151,13 @@ select {
   text-align: center;
   border: 0.5px solid black;
   background-color: cyan;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .pickPoster {
-
+  max-width: 50vh;
+  margin: auto;
+  display: block;
 }
