@@ -110,7 +110,7 @@ function Pick(props) {
                         <p className="title">{movie.title} <br /></p>
                         <p className="plotSummary">{movie.overview} <br /></p>
                         <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                        <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
+                        <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
                     </div>
                 ))}
             </div>
@@ -121,7 +121,7 @@ function Pick(props) {
                         <p className="title">{movie.title} <br /></p>
                         <p className="plotSummary">{movie.overview} <br /></p>
                         <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                        <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
+                        <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
                     </div>
                 ))}
             </div>
