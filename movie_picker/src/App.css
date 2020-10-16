@@ -70,33 +70,37 @@ header {
 } 
 
 .Homepage {
-  margin-top: 5px;
   padding-bottom: 10px;
-  padding-top:50px;
+  padding-top:10px;
   /* padding-left: 10px; */
   display: flex;
   justify-content: center;
-  /* width: 70vw; */
+  /* media query mobile */
+  /* width: 20vw; */
+  /* background-color: crimson; */
   width:100%;
-  background-color: black;
+}
+
+.homeButton {
+  text-align: center;
+}
+
+.actualButton {
+  position: relative;
+  margin: 1rem;
+  padding: 2rem; 
+  border-radius: 1rem;
+  justify-content: space-between;
 }
 
 .HomepageDiv {
   display: block;
-  flex-grow: .7;
-  background-color: blue;
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  text-align: center;
-
+  flex-grow: .04;
+  flex-direction: row;
+  
 }
 
-.homeButton {
-  flex: 1;
-  background-color: crimson;
-  align-content: center;
-  margin-top: 30px;
-}
+
 /* .Homepage {
   display: flex;
   align-items: center;
