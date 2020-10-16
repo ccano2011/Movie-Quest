@@ -38,29 +38,33 @@ header {
   margin: auto;
   padding-top:5px;
   padding-left: 10px;
-  /* display: inline-flex; */
+  display: flex;
+  justify-content: flex-start;
+  
   width: 100% ;
   background-color: darkslategray;
 }
 
 .navLinks {
   display: inline-flex;
-}
-
-.Link {
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-bottom: 0;
-  display: inline-flex;
-  justify-content: center;
+  /* for mobile media query */
+  /* display: inline block; */
+  /* justify-content: center; */
+  justify-content: flex-start;
+  flex-grow: 100;
   
 }
 
-.Zelda {
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-bottom: 0;
-  display: inline-flex;
+.navbar {
+  flex: 0.12;
+  /* for tablet media query */
+  /* flex: 1 ; */
+  position: relative;
+  text-align: center;
 }
-.navTitle{
-}
+
+.navbar::after {
+  content: "|"; 
+  position: absolute;
+  right:0;
+} 
