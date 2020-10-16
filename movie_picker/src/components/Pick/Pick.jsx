@@ -56,6 +56,7 @@ function Pick(props) {
     const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
         <div>
+            <h4 id="disclaimer">*Please refresh the page before Selecting a Genre after searching By Year*</h4>
             <div className="bestOfYear">
                 <h3 className="divTitle">Enter a year!</h3>
                 <form onSubmit={handleYear}>
@@ -69,9 +70,10 @@ function Pick(props) {
                             setYear(event.target.value)
                         }}
                     />
-                    <button type="submit">Submit Year</button>
+                    <button className="submitButton" type="submit">Submit Year</button>
                 </form>
             </div>
+            <h3 id="oR">-OR-</h3>
             <div className="bestOfGenre">
                 <h3 className="divTitle">Select a Genre!</h3>
                 <form id="dropdown">
@@ -100,29 +102,29 @@ function Pick(props) {
                     </select>
                     {/* <input type="submit" value="Submit" /> */}
                 </form>
-                <div>
-                    {bestOfYear.map((movie) => (
-                        <div key={movie.id}>
-                            <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                            <p className="title">{movie.title} <br /></p>
-                            <p className="plotSummary">{movie.overview} <br /></p>
-                            <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                            <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
-                        </div>
-                    ))}
-                </div>
-                <div>
-                    {genre.map((movie) => (
-                        <div key={movie.id}>
-                            <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                            <p className="title">{movie.title} <br /></p>
-                            <p className="plotSummary">{movie.overview} <br /></p>
-                            <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                            <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
-                        </div>
-                    ))}
-                </div>
-            </div >
+            </div>
+            <div>
+                {bestOfYear.map((movie) => (
+                    <div key={movie.id}>
+                        <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                        <p className="title">{movie.title} <br /></p>
+                        <p className="plotSummary">{movie.overview} <br /></p>
+                        <p className="userScore" >User ratings: {movie.vote_average}/10</p>
+                        <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
+                    </div>
+                ))}
+            </div>
+            <div>
+                {genre.map((movie) => (
+                    <div key={movie.id}>
+                        <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                        <p className="title">{movie.title} <br /></p>
+                        <p className="plotSummary">{movie.overview} <br /></p>
+                        <p className="userScore" >User ratings: {movie.vote_average}/10</p>
+                        <button className="button" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
+                    </div>
+                ))}
+            </div>
         </div >
     );
 }

@@ -1,7 +1,7 @@
 .App {
   min-height: 100%;
-  margin-top: 100px;
-  margin-bottom: 150px;
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 
 .footerLinks {
@@ -45,6 +45,26 @@ header {
   background-color: darkslategray;
 }
 
+button {
+  margin-bottom: 15px;
+  border-radius: 0.5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+input {
+  margin-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+select {
+  margin-bottom: 15px;
+  border-radius: 0.5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .navLinks {
   display: inline-flex;
   /* for mobile media query */
@@ -61,6 +81,8 @@ header {
   /* flex: 1 ; */
   position: relative;
   text-align: center;
+  max-width: 25vh;
+  min-width: 20vh;
 }
 /* This flexbox trick in particualr came from https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .navbar::after {
@@ -96,31 +118,40 @@ header {
 .HomepageDiv {
   display: block;
   flex-grow: .04;
-  flex-direction: row;
-  
+  flex-direction: row; 
 }
 
-
-/* .Homepage {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  background-color: black;
-  
-  flex-direction: column;
+.Pick {
+  /* display: flex; */
+  justify-content: center;
+  /* background-color: purple; */
 }
-
-.HomepageDiv {
-  margin: 0 auto;
-  flex: .8;
-  position: relative;
+#disclaimer {
   text-align: center;
-  background-color: red;
-  flex-direction: column;
-  justify-content: space-between;
+  /* media query mobile; */
+  /* width: 50vh; */
+  /* font-size: 12px; */
+}
+.bestOfYear{
+  background-color: whitesmoke;
+  display: flex;
+  text-align: center;
+  
+  border: 0.5px solid black;
+  /* max-width: 30%; */
 }
 
-.homeButton {
-  background-color: blue;
-  justify-content: space-between;
-} */
+#oR{
+  text-align: center; 
+  background-color: red;
+}
+
+.bestOfGenre {
+  text-align: center;
+  border: 0.5px solid black;
+  background-color: cyan;
+}
+
+.pickPoster {
+
+}

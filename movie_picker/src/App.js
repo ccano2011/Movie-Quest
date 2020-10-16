@@ -42,12 +42,14 @@ function App() {
             <Homepage />
           </Route>
         </div>
-        <Route path="/pick">
-          <Pick
-            fetchList={fetchList}
-            setFetchList={setFetchList}
-          />
-        </Route>
+        <div className="Pick">
+          <Route path="/pick">
+            <Pick
+              fetchList={fetchList}
+              setFetchList={setFetchList}
+            />
+          </Route>
+        </div>
         <Route path="/Choices">
           <Choices
             setFetchList={setFetchList}
