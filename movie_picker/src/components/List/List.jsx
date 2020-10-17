@@ -21,16 +21,15 @@ function List(props) {
             {
                 props.list.map((movie) => (
                     <div key={movie.id}>
-                        <img src={movie.fields.poster} alt={"poster for" + movie.fields.title} /> <br />
+                        <img className="pickPoster" src={movie.fields.poster} alt={"poster for" + movie.fields.title} /> <br />
                         <p className="title" >{movie.fields.title} <br /></p>
-                        {/* <p className="plotSummary">{movie.overview} <br /></p> */}
+                        <p className="plotSummary">{movie.fields.plotSummary} <br /></p>
                         <p className="userScore" >User ratings: {movie.fields.userRating}/10</p>
-                        <button onClick={() => handleDelete(movie.id)}>Remove from My List</button>
+                        <button className="listButton" onClick={() => handleDelete(movie.id)}>Remove from My List</button>
                     </div>
                 ))
             }
             <div>
-
             </div>
         </div>
 

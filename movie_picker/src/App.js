@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Route } from "react-router-dom";
 //Componenets are imported below:
-import Pick from './components/Pick/Pick'
+import Choices from "./components/Choices/Choices";
+import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
-import Choices from "./components/Choices/Choices";
-//import ".App.css"
+import Pick from './components/Pick/Pick';
+import './App.css'
 
 
 function App() {
@@ -34,29 +35,38 @@ function App() {
         <header>
           <Navbar />
         </header>
-        <div className="body">
-          {/* Route wraps whatever component you want to <Link to="">*/}
+
+        {/* Route wraps whatever component you want to <Link to="">*/}
+        <div className="Homepage">
           <Route exact path="/">
             <Homepage />
           </Route>
+        </div>
+        <div className="Pick">
           <Route path="/pick">
-            <Pick />
+            <Pick
+              fetchList={fetchList}
+              setFetchList={setFetchList}
+            />
           </Route>
+        </div>
+        <div className="Choices">
           <Route path="/Choices">
             <Choices
               setFetchList={setFetchList}
               fetchList={fetchList} />
           </Route>
-          <div className="myList">
-            <Route path="/list">
-              <List
-                list={list}
-                setFetchList={setFetchList}
-                setList={setList}
-                fetchList={fetchList} />
-            </Route>
-          </div>
         </div>
+        <div className="myList">
+          <Route path="/list">
+            <List
+              list={list}
+              setFetchList={setFetchList}
+              setList={setList}
+              fetchList={fetchList} />
+          </Route>
+        </div>
+
         {/* <div className="bestOf"> */}
         {/* Redirects to Pick Component */}
         {/* <button>Find the best movies by Year & Genre</button> */}
@@ -65,8 +75,12 @@ function App() {
         {/* Redirects to List Component */}
         {/* <button>My List</button> */}
         {/* </div> */}
+        <footer>
+          <Footer />
+        </footer>
       </>
     </div>
+
   );
 }
 export default App;

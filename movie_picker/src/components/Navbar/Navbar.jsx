@@ -4,25 +4,20 @@ import { Link } from "react-router-dom"
 class Navbar extends Component {
     render() {
         return (
-            <nav className="Navi">
-                <h1 className="navTitle">Movie Quest</h1>
-                <div className="navLinks">
-                    <ul>
-                        <li>
-                            <Link to="/">
-                                Home
+            <div className="navLinks">
+                <p className="navbar">Movie Quest</p>
+                <p className="navbar">
+                    <Link to="/">
+                        Home
                             </Link>
-                        </li>
-                        <li>
-                            <Link to="list">
-                                My List
+                </p>
+                <p className="navbar">
+                    <Link to="list" >
+                        My List
                             </Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                </p>
+            </div>
         )
     }
 }
-
 export default Navbar

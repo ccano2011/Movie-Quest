@@ -1,38 +1,312 @@
 .App {
+  min-height: 100%;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.footerLinks {
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  background-color: darkslategray;
+}
+
+#p{
+  margin-top: 4px;
+  margin-bottom: 0;
+  margin-left: 3px;
+  font-size: 9px;
+  color: aliceblue;
+}
+
+.tmdbLogo {
+  max-height: 50px;
+  min-height: 30px;
+  width: 50px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  background-color: darkslategray;
+} 
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top:0;
+  margin: auto;
+  padding-top:5px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100% ;
+  background-color: darkslategray;
+}
+
+button {
+  margin-bottom: 15px;
+  border-radius: 0.5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+input {
+  margin-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+select {
+  margin-bottom: 15px;
+  border-radius: 0.5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navLinks {
+  display: inline-flex;
+  /* for mobile media query */
+  /* display: inline block; */
+  /* justify-content: center; */
+  justify-content: flex-start;
+  font-weight: bold;
+  text-decoration-color: whitesmoke;
+  /* found out how to use flex-grow from https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow */
+  flex-grow: 100;
+}
+
+.navbar {
+  flex: 0.12;
+  position: relative;
+  text-align: center;
+  max-width: 25vh;
+  min-width: 20vh;
+}
+/* This flexbox trick in particualr came from https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.navbar::after {
+  content: "|"; 
+  position: absolute;
+  right:0;
+} 
+
+.Homepage {
+  padding-bottom: 10px;
+  padding-top:10px;
+  display: flex;
+  justify-content: center;
+  width:100%;
+}
+
+.homeButton {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.actualButton {
+  position: relative;
+  margin: 1rem;
+  padding: 2rem; 
+  border-radius: 1rem;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.HomepageDiv {
+  display: block;
+  flex-grow: .04;
+  flex-direction: row; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Pick {
+  /* display: flex; */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background-color: purple; */
+}
+#disclaimer {
+  text-align: center;
+  /* media query mobile; */
+  /* width: 50vh; */
+  /* font-size: 12px; */
+}
+.bestOfYear{
+  /* background-color: whitesmoke; */
+  text-align: center;
+  margin: auto;
+  display: block;
+  border: 0.5px solid whitesmoke;
+  border-radius: 1rem;
+  max-width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+#oR{
+  text-align: center; 
+  /* background-color: red; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bestOfGenre {
+  /* background-color: whitesmoke; */
+ 
+  text-align: center;
+  margin: auto;
+  display: block;
+  border: 0.5px solid whitesmoke;
+  border-radius: 1rem;
+  max-width: 30%;
+  margin-bottom: 20px;
+}
+
+.pickPoster {
+  max-width: 76vh;
+  min-width: 50vh;
+  margin: auto;
+  display: block;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 8vh;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.plotSummary {
+  max-width: 400px;
+  margin: auto;
+  display: block;
+}
+
+.userScore {
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.listButton {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 40px;
+}
+
+
+@media screen and (max-width:1024px) {
+
+  #disclaimer {
+    display:block;
+    margin: auto;
+    width: 50vh;
+    font-size: 12px;
+}
+.pickPoster {
+  max-width: 40vh;
+  min-width: 10vh;
+  margin: auto;
+  display: block;
+}
+.title {
+  font-weight: bold;
+  font-size: 5vh;
+  text-align: center;
+  margin-top: 30px;
+}
+.plotSummary {
+  max-width: 800px;
+  font-size: x-large;
+  margin: auto;
+  display: block;
+}
+.homeButton {
+  text-align: center;
+}
+.listButton {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem; 
+  font-size: xx-large;
+  margin-bottom: 40px;
+}
+.userScore {
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: xx-large;
+}
+.actualButton {
+  position: relative;
+  margin: 2rem;
+  padding: 5rem; 
+  border-radius: 1rem;
+  justify-content: space-between;
+  font-size: xx-large;
+}
+
+.HomepageDiv {
+  display: block;
+  flex-grow: .04;
+  flex-direction: row; 
+}
+#disclaimer {
+  text-align: center;
+  /* media query mobile; */
+  /* width: 50vh; */
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.bestOfYear{
+  /* background-color: whitesmoke; */
+  text-align: center;
+  margin: auto;
+  display: block;
+  border: 0.5px solid whitesmoke;
+  border-radius: 1rem;
+  max-width: 30%;
+  font-size: xx-large;
+}
+
+#oR{
+  text-align: center; 
+  font-size: xx-large;
+  /* background-color: red; */
+}
+
+.bestOfGenre {
+  /* background-color: whitesmoke; */
+ 
+  text-align: center;
+  margin: auto;
+  display: block;
+  border: 0.5px solid whitesmoke;
+  border-radius: 1rem;
+  max-width: 30%;
+  margin-bottom: 20px;
+  font-size: xx-large;
+}
+}
+
+@media screen and (max-width:630px) {
+
+#disclaimer {
+  display:block;
+  margin: auto;
+  width: 50vh;
+  font-size: 12px;
+}
+.pickPoster {
+  max-width: 30vh;
+  min-width: 10vh;
+  margin: auto;
+  display: block;
+}
+.title {
+  font-weight: bold;
+  font-size: 5vh;
+  text-align: center;
+  margin-top: 30px;
+}
+.plotSummary {
+  max-width: 280px;
+  margin: auto;
+  display: block;
+}
+
 }
