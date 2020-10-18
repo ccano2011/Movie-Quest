@@ -36,18 +36,23 @@ function Choices(props) {
         props.setFetchList(!props.fetchList);
     }
 
-    console.log(popEndpoint)
     const imageURL = `https://image.tmdb.org/t/p/w500`;
+
+    console.log(popEndpoint[0])
+
     return (
-        popEndpoint.map((movie) => (
-            <div key={movie.id}>
-                <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                <p className="title">{movie.title} <br /></p>
-                <p className="plotSummary">{movie.overview} <br /></p>
-                <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
-            </div>
-        ))
+        // <></>)
+        <div className="map">{
+            popEndpoint.map((movie) => (
+                <div key={movie.id} className="mappedContent">
+                    <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                    <p id="title">{movie.title} <br /></p>
+                    <p id="plotSummary">{movie.overview} <br /></p>
+                    <p id="userScore" >User ratings: {movie.vote_average}/10</p>
+                    <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? `Added to My List!` : "Add to My List"}</button>
+                </div>
+            ))
+        }</div>
     );
 }
 

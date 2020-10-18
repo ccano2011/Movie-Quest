@@ -99,6 +99,7 @@ select {
   width:100%;
 }
 
+
 .homeButton {
   text-align: center;
 }
@@ -155,27 +156,44 @@ select {
   margin-bottom: 20px;
 }
 
-.pickPoster {
-  max-width: 76vh;
-  min-width: 50vh;
-  margin: auto;
-  display: block;
+.map {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
 }
 
-.title {
+.mappedContent {
+  justify-content: space-evenly;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: 40px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+#pickPoster {
+  max-width: 35vh;
+  border: 2px solid black;
+  border-radius: 15px;
+  /* min-width: 50vh; */
+  /* margin: auto;
+  display: block; */
+}
+
+#title {
   font-weight: bold;
-  font-size: 8vh;
+  font-size: 3vh;
   text-align: center;
   margin-top: 30px;
 }
 
-.plotSummary {
+#plotSummary {
   max-width: 400px;
   margin: auto;
-  display: block;
+  /* display: block; */
 }
 
-.userScore {
+#userScore {
   margin-top: 25px;
   text-align: center;
   margin-bottom: 40px;
@@ -186,6 +204,8 @@ select {
   margin-right: auto;
   display: block;
   margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 
