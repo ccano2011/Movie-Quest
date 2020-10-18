@@ -10,12 +10,15 @@ function Choices(props) {
             const popularMoviesEndpoint = await axios.get(
                 `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_TMDB_KEY}`
             );
-            fetchPopEndpoint(popularMoviesEndpoint.data.results.slice(0, 10));
+            fetchPopEndpoint(popularMoviesEndpoint.data.results.slice(0, 10))
+            console.log(popularMoviesEndpoint.data.results[0].title)
         };
         popularMovies();
     }, []);
 
-    console.log(popEndpoint)
+    //This is where I was just trying to mess around with returning the title of the movie:
+    let name = popEndpoint[0]
+    console.log(name)
 
     const handleSubmit = async (movie) => {
         setAdded(true);
@@ -38,7 +41,18 @@ function Choices(props) {
 
     const imageURL = `https://image.tmdb.org/t/p/w500`;
 
-    console.log(popEndpoint[0])
+    console.log(popEndpoint)
+
+    // let durationBody = popEndpoint.map((movie) => {
+    //     return (
+    //         movie.title
+    //     )
+    // }
+    // );
+
+
+    // console.log(durationBody)
+
 
     return (
         // <></>)
