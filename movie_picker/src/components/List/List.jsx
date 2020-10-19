@@ -17,7 +17,7 @@ function List(props) {
 
 
     return (
-        <body>
+        <div className="body">
             <div className="map">
                 {
                     props.list.map((movie) => (
@@ -34,7 +34,7 @@ function List(props) {
                 <div>
                 </div>
             </div>
-        </body>
+        </div>
     )
 }
 export default List;

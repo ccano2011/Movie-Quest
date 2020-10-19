@@ -91,8 +91,8 @@ select {
   /* display: inline block; */
   /* justify-content: center; */
   /* margin-top: 15px; */
-  margin-bottom: 10px;
-  justify-content: flex-start;
+  /* margin-bottom: 10px; */
+  /* justify-content: flex-start; */
   font-weight: bold;
   text-decoration-color: whitesmoke;
   /* found out how to use flex-grow from https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow */
@@ -100,11 +100,8 @@ select {
 }
 
 .navbar {
-  flex: 0.12;
-  position: relative;
-  text-align: center;
-  max-width: 25vh;
-  min-width: 20vh;
+  max-width: 15vw;
+  min-width: 13vw;
   z-index: 1;
 }
 /* This flexbox trick in particualr came from https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
@@ -114,30 +111,36 @@ select {
   right:0;
 } 
 
-.Homepage {
-  padding-top:10px;
-  display: flex;
-  justify-content: center;
+.HomepageDiv {
+  /* padding-top:10px; */
+  display: inline-flex;
+  justify-content: space-around;
   width:100%;
+  position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%); 
+        
+
 }
 
-.homeButton {
-  text-align: center;
-}
 
 .actualButton {
-  position: relative;
   margin: 1rem;
   padding: 2rem; 
   border-radius: 1rem;
-  justify-content: space-between;
+  border: 0.5px solid whitesmoke;
+  background-color: rgb(240,248,255, 0.7);
+  font-weight: bold;
+
 }
 
-.HomepageDiv {
+/* .HomepageDiv {
   display: block;
   flex-grow: .04;
   flex-direction: row; 
-}
+} */
 
 .Pick {
   /* display: flex; */
@@ -161,6 +164,7 @@ select {
   /* width: 50vh; */
   /* font-size: 12px; */
 }
+
 .bestOfYear{
   /* background-color: whitesmoke; */
   text-align: center;
@@ -209,13 +213,15 @@ select {
   margin: 30px;
   border: 1px solid whitesmoke;
   border-radius: 15px;
-  max-width: 300px;
+  max-width: 300vw;
   backdrop-filter: blur(8px);
+  background-color: rgb(240,248,255, 0.7)
 }
 
 #pickPoster {
   flex: 1;
-  max-width: 35vh;
+  max-width: 15vw;
+  min-width: 9vw;
   border: 2px solid black;
   border-radius: 15px;
   /* min-width: 50vh; */
@@ -226,7 +232,7 @@ select {
 #title {
   flex: 1;
   font-weight: bold;
-  font-size: 3vh;
+  font-size: 2vw;
   text-align: center;
   margin-top: 30px;
 }

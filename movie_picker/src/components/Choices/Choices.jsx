@@ -40,7 +40,7 @@ function Choices(props) {
 
     return (
         // <></>)
-        <body>
+        <div className="body">
             <div className="map">{
                 popEndpoint.map((movie) => (
                     <div key={movie.id} className="mappedContent">
@@ -53,7 +53,7 @@ function Choices(props) {
                     </div>
                 ))
             }</div>
-        </body>
+        </div>
     );
 }
 

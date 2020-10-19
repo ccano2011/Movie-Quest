@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function Homepage(props) {
 
     return (
-        <body>
+        <div className="body">
             <div className="HomepageDiv">
                 <div id="popularList" className="homeButton">
                     {/* Redirects to options Component */}
@@ -24,7 +24,7 @@ function Homepage(props) {
                     </Link>
                 </div>
             </div>
-        </body>
+        </div>
     );
 }
 
