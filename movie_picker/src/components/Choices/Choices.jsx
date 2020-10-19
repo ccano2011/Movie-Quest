@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 //FOR POPULAR MOVIES
 function Choices(props) {
     const [popEndpoint, fetchPopEndpoint] = useState([]);
-    const [added, setAdded] = useState(false)
+
     useEffect(() => {
         const popularMovies = async () => {
             const popularMoviesEndpoint = await axios.get(
                 `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_TMDB_KEY}`
             );
             fetchPopEndpoint(popularMoviesEndpoint.data.results.slice(0, 10))
-            console.log(popularMoviesEndpoint.data.results[0].title)
         };
         popularMovies();
     }, []);
 
-    //This is where I was just trying to mess around with returning the title of the movie:
-    let name = popEndpoint[0]
-    console.log(name)
-
     const handleSubmit = async (movie) => {
-        setAdded(true);
         let image = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
         const fields = {
             title: movie.title,
@@ -43,30 +38,22 @@ function Choices(props) {
 
     console.log(popEndpoint)
 
-    // let durationBody = popEndpoint.map((movie) => {
-    //     return (
-    //         movie.title
-    //     )
-    // }
-    // );
-
-
-    // console.log(durationBody)
-
-
     return (
         // <></>)
-        <div className="map">{
-            popEndpoint.map((movie) => (
-                <div key={movie.id} className="mappedContent">
-                    <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                    <p id="title">{movie.title} <br /></p>
-                    <p id="plotSummary">{movie.overview} <br /></p>
-                    <p id="userScore" >User ratings: {movie.vote_average}/10</p>
-                    <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? `Added to My List!` : "Add to My List"}</button>
-                </div>
-            ))
-        }</div>
+        <body>
+            <div className="map">{
+                popEndpoint.map((movie) => (
+                    <div key={movie.id} className="mappedContent">
+                        <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                        <p id="title">{movie.title} <br /></p>
+                        <button className="listButton" onClick={() => handleSubmit(movie)}>Add to My List</button>
+                        <p id="plotSummary">{movie.overview} <br /></p>
+                        <p id="userScore" >User ratings: {movie.vote_average}/10</p>
+
+                    </div>
+                ))
+            }</div>
+        </body>
     );
 }
 

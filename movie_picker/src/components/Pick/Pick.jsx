@@ -6,7 +6,6 @@ import axios from "axios";
 function Pick(props) {
     const [bestOfYear, setBestOfYear] = useState([]);
     const [year, setYear] = useState("1999")
-    const [added, setAdded] = useState(false)
     const [genre, setGenre] = useState([])
     //passing the input values from the dropdown and storing it in state was from a solution found in stack overflow
     const [dropdownValue, setdropdownValue] = useState(1)
@@ -38,7 +37,6 @@ function Pick(props) {
 
     const handleSubmit = async (movie) => {
         let image = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-        setAdded(true);
         const fields = {
             title: movie.title,
             poster: image,
@@ -55,77 +53,79 @@ function Pick(props) {
 
     const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
-        <div>
-            <h4 id="disclaimer">*Please refresh the page before Selecting a Genre after searching By Year*</h4>
-            <div className="bestOfYear">
-                <h3 className="divTitle">Enter a year!</h3>
-                <form onSubmit={handleYear}>
-                    <input
-                        type="number"
-                        name="clicks"
-                        placeholder="1999"
-                        value={year}
-                        min="1900" max={new Date().getFullYear()}
-                        onChange={(event) => {
-                            setYear(event.target.value)
-                        }}
-                    />
-                    <button className="submitButton" type="submit">Submit Year</button>
-                </form>
-            </div>
-            <h3 id="oR">-OR-</h3>
-            <div className="bestOfGenre">
-                <h3 className="divTitle">Select a Genre!</h3>
-                <form id="dropdown">
-                    {/* This onChange function was inspired by 2 solutions on stack overflow */}
-                    <select onChange={(e) => setdropdownValue(e.target.value)} value={dropdownValue} >
-                        <option value="1">Select a Genre</option>
-                        <option value="28">Action</option>
-                        <option value="12">Adventure</option>
-                        <option value="16">Animation</option>
-                        <option value="35">Comedy</option>
-                        <option value="80">Crime</option>
-                        <option value="99">Documentary</option>
-                        <option value="18">Drama</option>
-                        <option value="10751">Family</option>
-                        <option value="14">Fantasy</option>
-                        <option value="36">History</option>
-                        <option value="27">Horror</option>
-                        <option value="10402">Music</option>
-                        <option value="9648">Mystery</option>
-                        <option value="10749">Romance</option>
-                        <option value="878">Sci-Fi</option>
-                        <option value="10770">TV Movies</option>
-                        <option value="53">Thrillers</option>
-                        <option value="10752">War</option>
-                        <option value="37">Western</option>
-                    </select>
-                    {/* <input type="submit" value="Submit" /> */}
-                </form>
-            </div>
+        <body>
             <div>
-                {bestOfYear.map((movie) => (
-                    <div key={movie.id}>
-                        <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                        <p className="title">{movie.title} <br /></p>
-                        <p className="plotSummary">{movie.overview} <br /></p>
-                        <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                        <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
-                    </div>
-                ))}
-            </div>
-            <div>
-                {genre.map((movie) => (
-                    <div key={movie.id}>
-                        <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                        <p className="title">{movie.title} <br /></p>
-                        <p className="plotSummary">{movie.overview} <br /></p>
-                        <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                        <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
-                    </div>
-                ))}
-            </div>
-        </div >
+                <h4 id="disclaimer">*Please refresh the page before Selecting a Genre after searching By Year*</h4>
+                <div className="bestOfYear">
+                    <h3 className="divTitle">Enter a year!</h3>
+                    <form onSubmit={handleYear}>
+                        <input
+                            type="number"
+                            name="clicks"
+                            placeholder="1999"
+                            value={year}
+                            min="1900" max={new Date().getFullYear()}
+                            onChange={(event) => {
+                                setYear(event.target.value)
+                            }}
+                        />
+                        <button className="submitButton" type="submit">Submit Year</button>
+                    </form>
+                </div>
+                <h3 id="oR">-OR-</h3>
+                <div className="bestOfGenre">
+                    <h3 className="divTitle">Select a Genre!</h3>
+                    <form id="dropdown">
+                        {/* This onChange function was inspired by 2 solutions on stack overflow */}
+                        <select onChange={(e) => setdropdownValue(e.target.value)} value={dropdownValue} >
+                            <option value="1">Select a Genre</option>
+                            <option value="28">Action</option>
+                            <option value="12">Adventure</option>
+                            <option value="16">Animation</option>
+                            <option value="35">Comedy</option>
+                            <option value="80">Crime</option>
+                            <option value="99">Documentary</option>
+                            <option value="18">Drama</option>
+                            <option value="10751">Family</option>
+                            <option value="14">Fantasy</option>
+                            <option value="36">History</option>
+                            <option value="27">Horror</option>
+                            <option value="10402">Music</option>
+                            <option value="9648">Mystery</option>
+                            <option value="10749">Romance</option>
+                            <option value="878">Sci-Fi</option>
+                            <option value="10770">TV Movies</option>
+                            <option value="53">Thrillers</option>
+                            <option value="10752">War</option>
+                            <option value="37">Western</option>
+                        </select>
+                        {/* <input type="submit" value="Submit" /> */}
+                    </form>
+                </div>
+                <div className="map">
+                    {bestOfYear.map((movie) => (
+                        <div key={movie.id} className="mappedContent">
+                            <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                            <p id="title">{movie.title} <br /></p>
+                            <button className="listButton" onClick={() => handleSubmit(movie)}>Add to My List</button>
+                            <p id="plotSummary">{movie.overview} <br /></p>
+                            <p id="userScore" >User ratings: {movie.vote_average}/10</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="map">
+                    {genre.map((movie) => (
+                        <div key={movie.id} className="mappedContent">
+                            <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                            <p id="title">{movie.title} <br /></p>
+                            <button className="listButton" onClick={() => handleSubmit(movie)}>Add to My List</button>
+                            <p id="plotSummary">{movie.overview} <br /></p>
+                            <p id="userScore" >User ratings: {movie.vote_average}/10</p>
+                        </div>
+                    ))}
+                </div>
+            </div >
+        </body>
     );
 }
 export default Pick

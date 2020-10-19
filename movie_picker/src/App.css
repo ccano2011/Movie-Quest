@@ -1,8 +1,26 @@
-.App {
+body {
   min-height: 100%;
   margin-top: 70px;
   margin-bottom: 100px;
+  background-image: url("https://avante.biz/wp-content/uploads/Hd-Wallpaper/Hd-Wallpaper-043.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  max-height: max-content;
+  background-size:cover;
+  background-attachment: fixed;
 }
+
+/* .background video{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+} */
 
 .footerLinks {
   position: fixed;
@@ -43,6 +61,8 @@ header {
   justify-content: flex-start;
   width: 100% ;
   background-color: darkslategray;
+  padding-bottom: 5px;
+  z-index: 1;
 }
 
 button {
@@ -70,6 +90,8 @@ select {
   /* for mobile media query */
   /* display: inline block; */
   /* justify-content: center; */
+  /* margin-top: 15px; */
+  margin-bottom: 10px;
   justify-content: flex-start;
   font-weight: bold;
   text-decoration-color: whitesmoke;
@@ -83,6 +105,7 @@ select {
   text-align: center;
   max-width: 25vh;
   min-width: 20vh;
+  z-index: 1;
 }
 /* This flexbox trick in particualr came from https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .navbar::after {
@@ -92,13 +115,11 @@ select {
 } 
 
 .Homepage {
-  padding-bottom: 10px;
   padding-top:10px;
   display: flex;
   justify-content: center;
   width:100%;
 }
-
 
 .homeButton {
   text-align: center;
@@ -124,7 +145,18 @@ select {
   /* background-color: purple; */
 }
 #disclaimer {
-  text-align: center;
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: -1;
+    max-width: 600px;
+    margin: auto;
+    justify-content: center;
+    background-color:  rgb(240,248,255, 0.7);
+    border: 0.5px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 2vh;
   /* media query mobile; */
   /* width: 50vh; */
   /* font-size: 12px; */
@@ -137,16 +169,18 @@ select {
   border: 0.5px solid whitesmoke;
   border-radius: 1rem;
   max-width: 30%;
+  background-color: rgb(240,248,255, 0.7);
+
 }
 
 #oR{
   text-align: center; 
+  color: rgb(240,248,255);
   /* background-color: red; */
 }
 
 .bestOfGenre {
   /* background-color: whitesmoke; */
- 
   text-align: center;
   margin: auto;
   display: block;
@@ -154,33 +188,43 @@ select {
   border-radius: 1rem;
   max-width: 30%;
   margin-bottom: 20px;
+  background-color: rgb(240,248,255, 0.7);
+
 }
 
 .map {
   display: flex;
   flex-direction: row;
   overflow: auto;
+  flex-wrap: wrap;
+  z-index: -1;
+  max-width: 1080px;
+  margin: auto;
 }
 
 .mappedContent {
+  flex: 1;
   justify-content: space-evenly;
   padding: 25px;
-  margin-left: auto;
-  margin-right: 40px;
-  border: 2px solid black;
+  margin: 30px;
+  border: 1px solid whitesmoke;
   border-radius: 15px;
+  max-width: 300px;
+  backdrop-filter: blur(8px);
 }
 
 #pickPoster {
+  flex: 1;
   max-width: 35vh;
   border: 2px solid black;
   border-radius: 15px;
   /* min-width: 50vh; */
-  /* margin: auto;
-  display: block; */
+  margin: auto;
+  display: block;
 }
 
 #title {
+  flex: 1;
   font-weight: bold;
   font-size: 3vh;
   text-align: center;
@@ -188,10 +232,16 @@ select {
 }
 
 #plotSummary {
-  max-width: 400px;
+  flex: 3;
+  max-width: 200px;
   margin: auto;
-  /* display: block; */
+    /*   background-color: white; */
+  max-height: 100px;
+  overflow-y: scroll;
+  align-items: center;
 }
+  /* display: block; */
+
 
 #userScore {
   margin-top: 25px;
