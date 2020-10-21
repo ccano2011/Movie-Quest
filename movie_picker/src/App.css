@@ -202,8 +202,8 @@ select {
   overflow: auto;
   flex-wrap: wrap;
   z-index: -1;
-  max-width: 1080px;
-  margin: auto;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .mappedContent {
@@ -220,8 +220,7 @@ select {
 
 #pickPoster {
   flex: 1;
-  max-width: 15vw;
-  min-width: 9vw;
+  max-width: 155px;
   border: 2px solid black;
   border-radius: 15px;
   /* min-width: 50vh; */
@@ -232,7 +231,7 @@ select {
 #title {
   flex: 1;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 25px;
   text-align: center;
   margin-top: 30px;
 }
@@ -264,27 +263,40 @@ select {
   border-radius: 20px;
 }
 
+@media screen and (max-width:1325px) {
+  .map {
+    margin: auto;
+  }
+}
 
 @media screen and (max-width:1024px) {
+
+  #title {
+    flex: 1 1;
+    font-weight: bold;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 30px;
+}
 
   #disclaimer {
     display:block;
     margin: auto;
-    width: 50vh;
+    width: 25vh;
     font-size: 12px;
 }
-.pickPoster {
-  max-width: 40vh;
+#pickPoster {
+  max-width: 20vh;
   min-width: 10vh;
   margin: auto;
   display: block;
 }
-.title {
+/* .title {
   font-weight: bold;
   font-size: 5vh;
   text-align: center;
   margin-top: 30px;
-}
+} */
 .plotSummary {
   max-width: 800px;
   font-size: x-large;
@@ -297,8 +309,8 @@ select {
 .listButton {
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem; 
-  font-size: xx-large;
+  padding: 0.3rem; 
+  font-size: large;
   margin-bottom: 40px;
 }
 .userScore {
@@ -309,8 +321,8 @@ select {
 }
 .actualButton {
   position: relative;
-  margin: 2rem;
-  padding: 5rem; 
+  /* margin: 2rem; */
+  /* padding: 5rem;  */
   border-radius: 1rem;
   justify-content: space-between;
   font-size: xx-large;
@@ -359,7 +371,14 @@ select {
 }
 }
 
-@media screen and (max-width:630px) {
+@media screen and (max-width:700px) {
+  .map {
+    display: flex;
+    flex-direction: row;
+    /* overflow: auto; */
+    flex-wrap: wrap;
+    z-index: -1;
+  }
 
 #disclaimer {
   display:block;
@@ -367,22 +386,36 @@ select {
   width: 50vh;
   font-size: 12px;
 }
-.pickPoster {
+#pickPoster {
   max-width: 30vh;
   min-width: 10vh;
   margin: auto;
   display: block;
 }
-.title {
+#title {
   font-weight: bold;
   font-size: 5vh;
   text-align: center;
   margin-top: 30px;
 }
-.plotSummary {
-  max-width: 280px;
+#plotSummary {
+  display: contents;
   margin: auto;
-  display: block;
+ 
 }
-
+.actualButton {
+  display: inherit;
+  /* flex-shrink: 5; */
+  /* padding: 5rem; */
+  border-radius: 1rem;
+  /* justify-content: space-between; */
+  font-size: large;
+}
+.listButton {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  font-size: x-large;
+  margin-bottom: 40px;
+}
 }

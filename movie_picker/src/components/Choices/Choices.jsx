@@ -15,7 +15,9 @@ function Choices(props) {
         };
         popularMovies();
     }, []);
-
+    if (!popEndpoint.length) {
+        return <h4>Loading...</h4>
+    }
     const handleSubmit = async (movie) => {
         let image = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
         const fields = {
@@ -33,7 +35,9 @@ function Choices(props) {
         });
         props.setFetchList(!props.fetchList);
     }
-
+    if (!popEndpoint.length) {
+        return <h4>Loading...</h4>
+    }
     const imageURL = `https://image.tmdb.org/t/p/w500`;
 
     console.log(popEndpoint)
