@@ -6,7 +6,6 @@ import axios from "axios";
 function Pick(props) {
     const [bestOfYear, setBestOfYear] = useState([]);
     const [year, setYear] = useState("1999")
-    const [added, setAdded] = useState(false)
     const [genre, setGenre] = useState([])
     //passing the input values from the dropdown and storing it in state was from a solution found in stack overflow
     const [dropdownValue, setdropdownValue] = useState(1)
@@ -38,7 +37,6 @@ function Pick(props) {
 
     const handleSubmit = async (movie) => {
         let image = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-        setAdded(true);
         const fields = {
             title: movie.title,
             poster: image,
@@ -55,7 +53,7 @@ function Pick(props) {
 
     const imageURL = `https://image.tmdb.org/t/p/w500`;
     return (
-        <div>
+        <div className="body">
             <h4 id="disclaimer">*Please refresh the page before Selecting a Genre after searching By Year*</h4>
             <div className="bestOfYear">
                 <h3 className="divTitle">Enter a year!</h3>
@@ -103,29 +101,30 @@ function Pick(props) {
                     {/* <input type="submit" value="Submit" /> */}
                 </form>
             </div>
-            <div>
+            <div className="map">
                 {bestOfYear.map((movie) => (
-                    <div key={movie.id}>
-                        <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                        <p className="title">{movie.title} <br /></p>
-                        <p className="plotSummary">{movie.overview} <br /></p>
-                        <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                        <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
+                    <div key={movie.id} className="mappedContent">
+                        <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                        <p id="title">{movie.title} <br /></p>
+                        <button className="listButton" onClick={() => handleSubmit(movie)}>Add to My List</button>
+                        <p id="plotSummary">{movie.overview} <br /></p>
+                        <p id="userScore" >User ratings: {movie.vote_average}/10</p>
                     </div>
                 ))}
             </div>
-            <div>
+            <div className="map">
                 {genre.map((movie) => (
-                    <div key={movie.id}>
-                        <img className="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
-                        <p className="title">{movie.title} <br /></p>
-                        <p className="plotSummary">{movie.overview} <br /></p>
-                        <p className="userScore" >User ratings: {movie.vote_average}/10</p>
-                        <button className="listButton" onClick={() => handleSubmit(movie)}>{added ? "Added to My List!" : "Add to My List"}</button>
+                    <div key={movie.id} className="mappedContent">
+                        <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
+                        <p id="title">{movie.title} <br /></p>
+                        <button className="listButton" onClick={() => handleSubmit(movie)}>Add to My List</button>
+                        <p id="plotSummary">{movie.overview} <br /></p>
+                        <p id="userScore" >User ratings: {movie.vote_average}/10</p>
                     </div>
                 ))}
             </div>
         </div >
+
     );
 }
 export default Pick

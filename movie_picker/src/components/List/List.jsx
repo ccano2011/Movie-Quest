@@ -17,22 +17,24 @@ function List(props) {
 
 
     return (
-        <div>
-            {
-                props.list.map((movie) => (
-                    <div key={movie.id}>
-                        <img className="pickPoster" src={movie.fields.poster} alt={"poster for" + movie.fields.title} /> <br />
-                        <p className="title" >{movie.fields.title} <br /></p>
-                        <p className="plotSummary">{movie.fields.plotSummary} <br /></p>
-                        <p className="userScore" >User ratings: {movie.fields.userRating}/10</p>
-                        <button className="listButton" onClick={() => handleDelete(movie.id)}>Remove from My List</button>
-                    </div>
-                ))
-            }
-            <div>
+        <div className="body">
+            <div className="map">
+                {
+                    props.list.map((movie) => (
+                        <div className="mappedContent" key={movie.id}>
+                            <img id="pickPoster" src={movie.fields.poster} alt={"poster for" + movie.fields.title} /> <br />
+                            <p id="title" >{movie.fields.title} <br /></p>
+                            <button className="listButton" onClick={() => handleDelete(movie.id)}>Remove from My List</button>
+                            <p id="plotSummary">{movie.fields.plotSummary} <br /></p>
+                            <p id="userScore" >User ratings: {movie.fields.userRating}/10</p>
+
+                        </div>
+                    ))
+                }
+                <div>
+                </div>
             </div>
         </div>
-
     )
 }
 export default List;
