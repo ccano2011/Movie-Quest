@@ -40,6 +40,7 @@ function Pick(props) {
         const fields = {
             title: movie.title,
             poster: image,
+            plotSummary: movie.overview,
             userRating: movie.vote_average,
         };
         const airTableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/list`
