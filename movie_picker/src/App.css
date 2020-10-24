@@ -294,7 +294,7 @@ select {
   #disclaimer {
     display:block;
     margin: auto;
-    width: 25vh;
+    /* width: 25vh; */
     font-size: 12px;
 }
 #pickPoster {
@@ -377,7 +377,6 @@ select {
 .bestOfGenre {
   /* background-color: whitesmoke; */
   text-shadow: 1px 1px 0 rgba(24, 25, 26), 0 2px 0 rgb(24, 25, 26);
-
   /* text-align: center;
   margin: auto;
   display: block;

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Route } from "react-router-dom";
 //Componenets are imported below:
 import Choices from "./components/Choices/Choices";
+import easterEgg from "./components/easterEgg/easterEgg"
 import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
@@ -35,7 +36,11 @@ function App() {
       <>
         <header>
           <Navbar />
+          <Route path="/easterEgg">
+            <easterEgg />
+          </Route>
         </header>
+
         <video className="background-video" autoPlay loop muted>
           <source src={Video} type="video/mp4" />
         </video>
