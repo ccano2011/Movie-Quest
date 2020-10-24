@@ -3,12 +3,22 @@ import axios from "axios";
 import { Route } from "react-router-dom";
 //Componenets are imported below:
 import Choices from "./components/Choices/Choices";
+<<<<<<< HEAD
+=======
+import easterEgg from "./components/easterEgg/easterEgg"
+>>>>>>> Working-branch
 import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
+<<<<<<< HEAD
 import Pick from './components/Pick/Pick';
 import './App.css'
+=======
+import Video from './components/videos/video_background.mp4';
+import Pick from './components/Pick/Pick';
+import './App.css';
+>>>>>>> Working-branch
 
 
 function App() {
@@ -34,8 +44,17 @@ function App() {
       <>
         <header>
           <Navbar />
+          <Route path="/easterEgg">
+            <easterEgg />
+          </Route>
         </header>
 
+<<<<<<< HEAD
+=======
+        <video className="background-video" autoPlay loop muted>
+          <source src={Video} type="video/mp4" />
+        </video>
+>>>>>>> Working-branch
         {/* Route wraps whatever component you want to <Link to="">*/}
         <div className="Homepage">
           <Route exact path="/">

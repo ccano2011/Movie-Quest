@@ -2,7 +2,11 @@ body {
   min-height: 100%;
   margin-top: 70px;
   margin-bottom: 100px;
+<<<<<<< HEAD
   background-image: url("https://avante.biz/wp-content/uploads/Hd-Wallpaper/Hd-Wallpaper-043.jpg");
+=======
+  /* background-image: url("https://avante.biz/wp-content/uploads/Hd-Wallpaper/Hd-Wallpaper-043.jpg"); */
+>>>>>>> Working-branch
   background-repeat: no-repeat;
   background-position: center;
   max-width: 100%;
@@ -11,8 +15,13 @@ body {
   background-attachment: fixed;
 }
 
+<<<<<<< HEAD
 /* .background video{
     position: absolute;
+=======
+.background-video{
+    position: fixed;
+>>>>>>> Working-branch
     width: 100%;
     left: 50%;
     top: 50%;
@@ -20,13 +29,21 @@ body {
     object-fit: cover;
     transform: translate(-50%,-50%);
     z-index: -1;
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> Working-branch
 
 .footerLinks {
   position: fixed;
   bottom:0;
   width: 100%;
+<<<<<<< HEAD
   background-color: darkslategray;
+=======
+  /* background-color: dimgray; */
+>>>>>>> Working-branch
 }
 
 #p{
@@ -44,11 +61,22 @@ body {
   padding-top: 7px;
   padding-bottom: 5px;
   padding-left: 10px;
+<<<<<<< HEAD
   background-color: darkslategray;
+=======
+>>>>>>> Working-branch
 } 
 
 a {
   text-decoration: none;
+<<<<<<< HEAD
+=======
+  color: whitesmoke;
+}
+
+a:hover {
+  color: powderblue;
+>>>>>>> Working-branch
 }
 
 header {
@@ -60,7 +88,12 @@ header {
   display: flex;
   justify-content: flex-start;
   width: 100% ;
+<<<<<<< HEAD
   background-color: darkslategray;
+=======
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0), rgba(0,0,0,.9));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0), rgba(0,0,0,.9));
+>>>>>>> Working-branch
   padding-bottom: 5px;
   z-index: 1;
 }
@@ -103,6 +136,10 @@ select {
   max-width: 15vw;
   min-width: 13vw;
   z-index: 1;
+<<<<<<< HEAD
+=======
+  color: whitesmoke;
+>>>>>>> Working-branch
 }
 /* This flexbox trick in particualr came from https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .navbar::after {
@@ -130,10 +167,18 @@ select {
   margin: 1rem;
   padding: 2rem; 
   border-radius: 1rem;
+<<<<<<< HEAD
   border: 0.5px solid whitesmoke;
   background-color: rgb(240,248,255, 0.7);
   font-weight: bold;
 
+=======
+  border: 0.5px solid gray;
+  background-color: rgb(240,248,255, 0.3);
+  font-weight: bold;
+  color: whitesmoke;
+  text-shadow: 0 2px 0 rgb(24, 25, 26)
+>>>>>>> Working-branch
 }
 
 /* .HomepageDiv {
@@ -167,6 +212,13 @@ select {
 
 .bestOfYear{
   /* background-color: whitesmoke; */
+<<<<<<< HEAD
+=======
+  display: inline;
+  font-weight: bold;
+  color: whitesmoke;
+  text-shadow: 0 2px 0 rgb(24, 25, 26);
+>>>>>>> Working-branch
   text-align: center;
   margin: auto;
   display: block;
@@ -180,11 +232,16 @@ select {
 #oR{
   text-align: center; 
   color: rgb(240,248,255);
+<<<<<<< HEAD
+=======
+  text-shadow: 0 2px 0 rgb(24, 25, 26);
+>>>>>>> Working-branch
   /* background-color: red; */
 }
 
 .bestOfGenre {
   /* background-color: whitesmoke; */
+<<<<<<< HEAD
   text-align: center;
   margin: auto;
   display: block;
@@ -194,6 +251,13 @@ select {
   margin-bottom: 20px;
   background-color: rgb(240,248,255, 0.7);
 
+=======
+  display: inline;
+  font-weight: bold;
+  color: whitesmoke;
+  text-shadow: 0 2px 0 rgb(24, 25, 26);
+  text-align: center;
+>>>>>>> Working-branch
 }
 
 .map {
@@ -211,18 +275,30 @@ select {
   justify-content: space-evenly;
   padding: 25px;
   margin: 30px;
+<<<<<<< HEAD
   border: 1px solid whitesmoke;
   border-radius: 15px;
   max-width: 300vw;
   backdrop-filter: blur(8px);
   background-color: rgb(240,248,255, 0.7)
+=======
+  border-radius: 15px;
+  max-width: 300vw;
+  backdrop-filter: blur(8px);
+>>>>>>> Working-branch
 }
 
 #pickPoster {
   flex: 1;
   max-width: 155px;
+<<<<<<< HEAD
   border: 2px solid black;
   border-radius: 15px;
+=======
+  border: 1px solid black;
+  box-shadow:1px black;
+  /* border-radius: 15px; */
+>>>>>>> Working-branch
   /* min-width: 50vh; */
   margin: auto;
   display: block;
@@ -234,16 +310,35 @@ select {
   font-size: 25px;
   text-align: center;
   margin-top: 30px;
+<<<<<<< HEAD
 }
 
 #plotSummary {
   flex: 3;
   max-width: 200px;
+=======
+  color: whitesmoke;
+  /* Following was a w3schools resource */
+  text-shadow: 1px 1px 0 rgba(24, 25, 26), 0 2px 0 rgb(24, 25, 26);
+}
+
+
+#plotSummary {
+  flex: 3;
+>>>>>>> Working-branch
   margin: auto;
     /*   background-color: white; */
   max-height: 100px;
   overflow-y: scroll;
   align-items: center;
+<<<<<<< HEAD
+=======
+  color: whitesmoke;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background: rgb(0,0,0, 0.4);
 }
   /* display: block; */
 
@@ -252,8 +347,23 @@ select {
   margin-top: 25px;
   text-align: center;
   margin-bottom: 40px;
+  color: whitesmoke;
+  background: rgb(0,0,0, 0.4);
+  border-radius: 5px;
+>>>>>>> Working-branch
+}
+  /* display: block; */
+
+
+<<<<<<< HEAD
+#userScore {
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
+=======
+>>>>>>> Working-branch
 .listButton {
   margin-left: auto;
   margin-right: auto;
@@ -282,7 +392,11 @@ select {
   #disclaimer {
     display:block;
     margin: auto;
+<<<<<<< HEAD
     width: 25vh;
+=======
+    /* width: 25vh; */
+>>>>>>> Working-branch
     font-size: 12px;
 }
 #pickPoster {
@@ -319,6 +433,7 @@ select {
   margin-bottom: 40px;
   font-size: xx-large;
 }
+<<<<<<< HEAD
 .actualButton {
   position: relative;
   /* margin: 2rem; */
@@ -327,6 +442,17 @@ select {
   justify-content: space-between;
   font-size: xx-large;
 }
+=======
+/* #actualButton { */
+  /* position: relative; */
+  /* margin: 2rem; */
+  /* padding: 5rem;  */
+  /* border-radius: 1rem; */
+  /* justify-content: space-between; */
+  /* font-size: xx-large; */
+  /* ; */
+/* } */
+>>>>>>> Working-branch
 
 .HomepageDiv {
   display: block;
@@ -342,31 +468,56 @@ select {
 }
 .bestOfYear{
   /* background-color: whitesmoke; */
+<<<<<<< HEAD
   text-align: center;
+=======
+  /* text-align: center;
+>>>>>>> Working-branch
   margin: auto;
   display: block;
   border: 0.5px solid whitesmoke;
   border-radius: 1rem;
+<<<<<<< HEAD
   max-width: 30%;
   font-size: xx-large;
+=======
+  max-width: 30%; */
+  font-size: xx-large;
+  text-shadow: 1px 1px 0 rgba(24, 25, 26), 0 2px 0 rgb(24, 25, 26);
+
+>>>>>>> Working-branch
 }
 
 #oR{
   text-align: center; 
   font-size: xx-large;
+<<<<<<< HEAD
+=======
+  text-shadow: 1px 1px 0 rgba(24, 25, 26), 0 2px 0 rgb(24, 25, 26);
+
+>>>>>>> Working-branch
   /* background-color: red; */
 }
 
 .bestOfGenre {
   /* background-color: whitesmoke; */
+<<<<<<< HEAD
  
   text-align: center;
+=======
+  text-shadow: 1px 1px 0 rgba(24, 25, 26), 0 2px 0 rgb(24, 25, 26);
+  /* text-align: center;
+>>>>>>> Working-branch
   margin: auto;
   display: block;
   border: 0.5px solid whitesmoke;
   border-radius: 1rem;
   max-width: 30%;
+<<<<<<< HEAD
   margin-bottom: 20px;
+=======
+  margin-bottom: 20px; */
+>>>>>>> Working-branch
   font-size: xx-large;
 }
 }
@@ -403,6 +554,7 @@ select {
   margin: auto;
  
 }
+<<<<<<< HEAD
 .actualButton {
   display: inherit;
   /* flex-shrink: 5; */
@@ -411,6 +563,8 @@ select {
   /* justify-content: space-between; */
   font-size: large;
 }
+=======
+>>>>>>> Working-branch
 .listButton {
   margin-left: auto;
   margin-right: auto;
