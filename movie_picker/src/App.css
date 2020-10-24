@@ -174,18 +174,10 @@ select {
 
 .bestOfYear{
   /* background-color: whitesmoke; */
-  display: inline;
   font-weight: bold;
   color: whitesmoke;
   text-shadow: 0 2px 0 rgb(24, 25, 26);
-  text-align: center;
-  margin: auto;
-  display: block;
-  border: 0.5px solid whitesmoke;
-  border-radius: 1rem;
-  max-width: 30%;
-  background-color: rgb(240,248,255, 0.7);
-
+  text-align: center;  
 }
 
 #oR{
