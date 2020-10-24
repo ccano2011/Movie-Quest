@@ -119,28 +119,28 @@ This project will also use Airtable to store movies the user wants to save for l
 |10-14-20| Initial Clickable Model | Complete
 |10-15-20| Core Application Structure (HTML, CSS, etc.) | Complete
 |10-16-20| MVP | Complete
-|10-16-20| Presentations | Incomplete
+|10-16-20| Presentations | Complete
 
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Initial Pseudocode/Planning & App component structure| H | 2hrs| 3hrs | hrs |
-| Add axios to return "Popular Movies" from TMDB API w/ Query strings| H | 2hrs| 2hrs | hrs |
-| Create React component */* for the Homepage with Button for "Show me what's popular" | H | 4hrs| 5hrs | hrs |
-| Have Button redirect user to */choices/:query* | H | 3hrs| 30min | hrs |
-| Add axios to */choices/:query* from Airtable and create "Add to My List" Button | H | 4hrs| 5hrs | hrs |
-| Have */choices/:query* return a list of results for "Popular Movies" | H | 4hrs| 2hrs | hrs |
-| Allow user to select a movie from */choices/:query* and add it to "My List" | H | 4hrs| 4hrs | hrs |
-| Create */pick/:menu* for the "Best of genre/year" with options for users to input either genre or year  | H | 4hrs| 5hrs | hrs |
-| Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| 4hrs | hrs |
-| After MVP functionality is completed, begin initial CSS styling for "Homepage"| H | 3hrs| 3hrs | hrs |
-| CSS styling for "Popular Movies" | H | 3hrs| 30 min | hrs |
-| CSS styling for "Choice" | H | 3hrs| 10min | hrs |
-| CSS styling for "My List" | H | 3hrs| 10min | hrs |
-| CSS styling for "Pick" | H | 3hrs| 1hr | hrs |
-| CSS styling for Mobile & Tablet | H | 15min| 20min | hrs |
-| Total | H | 49hrs| 35.5hrs | hrs |
+| Initial Pseudocode/Planning & App component structure| H | 2hrs| 3hrs | 3hrs |
+| Add axios to return "Popular Movies" from TMDB API w/ Query strings| H | 2hrs| 2hrs | 3hrs |
+| Create React component */* for the Homepage with Button for "Show me what's popular" | H | 4hrs| 5hrs | 5hrs |
+| Have Button redirect user to */choices/:query* | H | 3hrs| 30min | 30min |
+| Add axios to */choices/:query* from Airtable and create "Add to My List" Button | H | 4hrs| 5hrs | 5hrs |
+| Have */choices/:query* return a list of results for "Popular Movies" | H | 4hrs| 2hrs | 2hrs |
+| Allow user to select a movie from */choices/:query* and add it to "My List" | H | 4hrs| 4hrs | 4hrs |
+| Create */pick/:menu* for the "Best of genre/year" with options for users to input either genre or year  | H | 4hrs| 5hrs | 5hrs |
+| Have */choice/:query* return a list of results for "Best of genre/year" | H | 4hrs| 4hrs | 4hrs |
+| After MVP functionality is completed, begin initial CSS styling for "Homepage"| H | 3hrs| 3hrs | 3hrs |
+| CSS styling for "Popular Movies" | H | 3hrs| 30 min | 3hrs |
+| CSS styling for "Choice" | H | 3hrs| 10min | 1hr |
+| CSS styling for "My List" | H | 3hrs| 10min | 15 min |
+| CSS styling for "Pick" | H | 3hrs| 1hr | 1hr |
+| CSS styling for Mobile & Tablet | H | 15min| 20min | 1hr |
+| Total | H | 49hrs| 35.5hrs | ~41hrs |
 
 ## SWOT Analysis
 
@@ -176,3 +176,6 @@ This project will also use Airtable to store movies the user wants to save for l
             - Removed "MovieInfo" Component for simplicity and to ensure a better, feature complete version upon deliverable
             - Added "Footer" component to satisfy TMDB's Terms & Conditions for use of their API and credit them on every component of the app
         - Changed the dropdown feature to a form for simplicity and to ensure on-time deliverable
+
+    10/23/20:
+        - Completed all styling for post MVP.
