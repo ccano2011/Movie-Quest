@@ -8,6 +8,7 @@ import Homepage from "./components/Homepage/Homepage";
 import List from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
 import Pick from './components/Pick/Pick';
+import Video from './components/videos/video_background.mp4'
 import './App.css'
 
 
