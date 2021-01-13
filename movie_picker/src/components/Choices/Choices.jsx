@@ -50,10 +50,9 @@ function Choices(props) {
                     <div key={movie.id} className="mappedContent">
                         <img id="pickPoster" src={imageURL + movie.poster_path} alt={"poster for" + movie.title} /> <br />
                         <p id="title">{movie.title} <br /></p>
-                        <button className="listButton" onClick={() => handleSubmit(movie)}>Add to My List</button>
                         <p id="plotSummary">{movie.overview} <br /></p>
                         <p id="userScore" >User ratings: {movie.vote_average}/10</p>
-
+                        <button className="listButton" onClick={() => handleSubmit(movie)}>Add to My List</button>
                     </div>
                 ))
             }</div>
