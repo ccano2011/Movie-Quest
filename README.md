@@ -5,7 +5,7 @@
 Movie Quest
 
 ### Netlify Site
-https://movie-quest.netlify.app/list
+https://movie-quest.netlify.app/
 
 ## Project Description
 
